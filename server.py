@@ -1,0 +1,20 @@
+from fastapi import FastAPI
+
+from services.AuthService.app.main import app as auth_service_app
+from services.AdminService.app.main import app as admin_service_app
+from services.AutomationService.app.main import app as automation_service_app
+from services.NotificationService.app.main import app as notification_service_app
+from services.GeneralUserService.app.main import app as general_user_service_app
+from services.CashingService.app.main import app as cashing_service_app
+
+app = FastAPI(title="Main API")
+
+app.mount("/auth", auth_service_app)
+app.mount("/admin", admin_service_app)
+app.mount("/notification",notification_service_app)
+app.mount("/general",general_user_service_app)
+
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
