@@ -9,6 +9,9 @@ services:
       - .:/app
     environment:
       - WATCHFILES_FORCE_POLLING=true
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
 
   redis_database:
     image: "redis:alpine"

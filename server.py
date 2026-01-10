@@ -1,5 +1,12 @@
+import os
+
+import httpx
+from dotenv import load_dotenv
 from fastapi import FastAPI
 
+from app.database import get_supabase_client
+
+load_dotenv()
 from services.AuthService.app.main import app as auth_service_app
 from services.AdminService.app.main import app as admin_service_app
 from services.AutomationService.app.main import app as automation_service_app
@@ -18,3 +25,6 @@ app.mount("/general",general_user_service_app)
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+
+
