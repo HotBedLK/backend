@@ -1,0 +1,513 @@
+[
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
+        "label": "create_client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_supabase_client",
+        "importPath": "app.database.supabase",
+        "description": "app.database.supabase",
+        "isExtraImport": true,
+        "detail": "app.database.supabase",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "RequestValidationError",
+        "importPath": "fastapi.exceptions",
+        "description": "fastapi.exceptions",
+        "isExtraImport": true,
+        "detail": "fastapi.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "httpx",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "httpx",
+        "description": "httpx",
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "get_supabase_client",
+        "importPath": "app.database",
+        "description": "app.database",
+        "isExtraImport": true,
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "services.AuthService.app.main",
+        "description": "services.AuthService.app.main",
+        "isExtraImport": true,
+        "detail": "services.AuthService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "services.AdminService.app.main",
+        "description": "services.AdminService.app.main",
+        "isExtraImport": true,
+        "detail": "services.AdminService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "services.AutomationService.app.main",
+        "description": "services.AutomationService.app.main",
+        "isExtraImport": true,
+        "detail": "services.AutomationService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "services.NotificationService.app.main",
+        "description": "services.NotificationService.app.main",
+        "isExtraImport": true,
+        "detail": "services.NotificationService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "services.GeneralUserService.app.main",
+        "description": "services.GeneralUserService.app.main",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "services.CashingService.app.main",
+        "description": "services.CashingService.app.main",
+        "isExtraImport": true,
+        "detail": "services.CashingService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "app.configs.Configs",
+        "description": "app.configs.Configs",
+        "peekOfCode": "class Settings(BaseSettings):\n    SUPABASE_URL:str = config(\"SUPABASE_URL\")\n    SUPABASE_SERVICE_ROLE_KEY:str = config(\"SUPABASE_SERVICE_ROLE_KEY\")\n    SUPABASE_ANON_KEY:str = config(\"SUPABASE_ANON_KEY\")\ndef get_settings():\n    settings = Settings()\n    return settings",
+        "detail": "app.configs.Configs",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "kind": 2,
+        "importPath": "app.configs.Configs",
+        "description": "app.configs.Configs",
+        "peekOfCode": "def get_settings():\n    settings = Settings()\n    return settings",
+        "detail": "app.configs.Configs",
+        "documentation": {}
+    },
+    {
+        "label": "get_supabase_client",
+        "kind": 2,
+        "importPath": "app.database.supabase",
+        "description": "app.database.supabase",
+        "peekOfCode": "def get_supabase_client() -> Client:\n    supabase_url = config(\"SUPABASE_URL\")\n    supabase_key = config(\"SUPABASE_SERVICE_ROLE_KEY\") or config(\"SUPABASE_ANON_KEY\")\n    if not supabase_url or not supabase_key:\n        raise RuntimeError(\n            \"Supabase config missing: set SUPABASE_URL and \"\n            \"SUPABASE_SERVICE_ROLE_KEY (or SUPABASE_ANON_KEY).\"\n        )\n    return create_client(supabase_url, supabase_key)",
+        "detail": "app.database.supabase",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "services.AdminService.app.main",
+        "description": "services.AdminService.app.main",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.AdminService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "services.AdminService.app.main",
+        "description": "services.AdminService.app.main",
+        "peekOfCode": "app = FastAPI(title=\"Admin Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.AdminService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "services.AuthService.app.api.registerAuth",
+        "description": "services.AuthService.app.api.registerAuth",
+        "peekOfCode": "def register(registerData: RegisterInputSchema, db: Annotated[Client, Depends(get_supabase_client)]):\n    print(db)\n    raise registerExceptions.TestException(message=\"hi\")",
+        "detail": "services.AuthService.app.api.registerAuth",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class RegisterException(Exception):\n    def __init__(\n        self,\n        error_code: str,\n        error_message: str,\n        status_code: int = 400,\n    ):\n        self.error_code = error_code\n        self.error_message = error_message\n        self.status_code = status_code",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TestException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class TestException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"EMAIL_ALREADY_EXISTS\",\n            error_message=message,\n            status_code=409,\n        )",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ErrorResponse",
+        "kind": 6,
+        "importPath": "services.AuthService.app.schemas.ErrorResponse",
+        "description": "services.AuthService.app.schemas.ErrorResponse",
+        "peekOfCode": "class ErrorResponse(BaseModel):\n    error_code: str\n    error_message: str\n    status_code: int",
+        "detail": "services.AuthService.app.schemas.ErrorResponse",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterInputSchema",
+        "kind": 6,
+        "importPath": "services.AuthService.app.schemas.registerInputSchema",
+        "description": "services.AuthService.app.schemas.registerInputSchema",
+        "peekOfCode": "class RegisterInputSchema(BaseModel):\n    first_name: str = Field(..., min_length=1, description=\"First name is required\")\n    last_name: str = Field(..., min_length=1, description=\"Last name is required\")\n    password: str = Field(..., min_length=8, description=\"Password must be at least 8 characters\")\n    mobile_number: str = Field(..., description=\"Mobile number must be 10 digits\")\n    email: EmailStr = Field(..., description=\"A valid email address is required\")\n    @field_validator(\"password\")\n    def validate_password(cls, value):\n        if len(value) < 8:\n            raise ValueError(\"Password must be at least 8 characters long\")",
+        "detail": "services.AuthService.app.schemas.registerInputSchema",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "services.AuthService.app.main",
+        "description": "services.AuthService.app.main",
+        "peekOfCode": "app = FastAPI(title=\"Auth Service\")\napp.include_router(register_router)\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []\n    for error in exc.errors():\n        messages.append(error[\"msg\"])",
+        "detail": "services.AuthService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "services.AutomationService.app.main",
+        "description": "services.AutomationService.app.main",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.AutomationService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "services.AutomationService.app.main",
+        "description": "services.AutomationService.app.main",
+        "peekOfCode": "app = FastAPI(title=\"Automation Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.AutomationService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "services.CashingService.app.main",
+        "description": "services.CashingService.app.main",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.CashingService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "services.CashingService.app.main",
+        "description": "services.CashingService.app.main",
+        "peekOfCode": "app = FastAPI(title=\"Cashing Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.CashingService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.main",
+        "description": "services.GeneralUserService.app.main",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.GeneralUserService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "services.GeneralUserService.app.main",
+        "description": "services.GeneralUserService.app.main",
+        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.GeneralUserService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "services.NotificationService.app.main",
+        "description": "services.NotificationService.app.main",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.NotificationService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "services.NotificationService.app.main",
+        "description": "services.NotificationService.app.main",
+        "peekOfCode": "app = FastAPI(title=\"Notification Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "detail": "services.NotificationService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "server",
+        "description": "server",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\"}",
+        "detail": "server",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "server",
+        "description": "server",
+        "peekOfCode": "app = FastAPI(title=\"Main API\")\napp.mount(\"/auth\", auth_service_app)\napp.mount(\"/admin\", admin_service_app)\napp.mount(\"/notification\",notification_service_app)\napp.mount(\"/general\",general_user_service_app)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\"}",
+        "detail": "server",
+        "documentation": {}
+    }
+]
