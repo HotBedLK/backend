@@ -81,6 +81,14 @@
         "documentation": {}
     },
     {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -190,6 +198,14 @@
         "description": "app.database.supabase",
         "isExtraImport": true,
         "detail": "app.database.supabase",
+        "documentation": {}
+    },
+    {
+        "label": "APIError",
+        "importPath": "postgrest.exceptions",
+        "description": "postgrest.exceptions",
+        "isExtraImport": true,
+        "detail": "postgrest.exceptions",
         "documentation": {}
     },
     {
@@ -371,8 +387,17 @@
         "kind": 2,
         "importPath": "services.AuthService.app.api.registerAuth",
         "description": "services.AuthService.app.api.registerAuth",
-        "peekOfCode": "def register(registerData: RegisterInputSchema, db: Annotated[Client, Depends(get_supabase_client)]):\n    print(db)\n    raise registerExceptions.TestException(message=\"hi\")",
+        "peekOfCode": "def register(data: RegisterInputSchema, db: Annotated[Client, Depends(get_supabase_client)]):\n    registerService(registerData=data.model_dump(),db=db)",
         "detail": "services.AuthService.app.api.registerAuth",
+        "documentation": {}
+    },
+    {
+        "label": "Transactions",
+        "kind": 6,
+        "importPath": "services.AuthService.app.db.transactions",
+        "description": "services.AuthService.app.db.transactions",
+        "peekOfCode": "class Transactions:\n    #check user existance via email address\n    @staticmethod\n    def check_user_by_email(email, db: Client):\n        try:\n            user = db.table(\"Users\").select(\"email\").eq('email',email).execute()\n            if len(user.data) == 0:\n                return False\n            return True\n        except APIError:",
+        "detail": "services.AuthService.app.db.transactions",
         "documentation": {}
     },
     {
@@ -385,11 +410,29 @@
         "documentation": {}
     },
     {
-        "label": "TestException",
+        "label": "SupabaseApiFailException",
         "kind": 6,
         "importPath": "services.AuthService.app.exceptions.registerExceptions",
         "description": "services.AuthService.app.exceptions.registerExceptions",
-        "peekOfCode": "class TestException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"EMAIL_ALREADY_EXISTS\",\n            error_message=message,\n            status_code=409,\n        )",
+        "peekOfCode": "class SupabaseApiFailException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=500,\n        )\nclass UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "UserEmailAlreadyExistsException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"DUPLICATE_USER_CREATION\",\n            error_message=message,\n            status_code=401,\n        )\nclass UserNumberAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "UserNumberAlreadyExistsException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class UserNumberAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"DUPLICATE_USER_CREATION\",\n            error_message=message,\n            status_code=401,\n        )",
         "detail": "services.AuthService.app.exceptions.registerExceptions",
         "documentation": {}
     },
@@ -409,6 +452,15 @@
         "description": "services.AuthService.app.schemas.registerInputSchema",
         "peekOfCode": "class RegisterInputSchema(BaseModel):\n    first_name: str = Field(..., min_length=1, description=\"First name is required\")\n    last_name: str = Field(..., min_length=1, description=\"Last name is required\")\n    password: str = Field(..., min_length=8, description=\"Password must be at least 8 characters\")\n    mobile_number: str = Field(..., description=\"Mobile number must be 10 digits\")\n    email: EmailStr = Field(..., description=\"A valid email address is required\")\n    @field_validator(\"password\")\n    def validate_password(cls, value):\n        if len(value) < 8:\n            raise ValueError(\"Password must be at least 8 characters long\")",
         "detail": "services.AuthService.app.schemas.registerInputSchema",
+        "documentation": {}
+    },
+    {
+        "label": "registerService",
+        "kind": 2,
+        "importPath": "services.AuthService.app.services.registerService",
+        "description": "services.AuthService.app.services.registerService",
+        "peekOfCode": "def registerService(registerData,db):\n    \"\"\"\n    Docstring for registerService\n    Register a user using user details and send sms otp messages to phone number\n    \"\"\"\n    #check user existance by email address\n    exist_userByEmail = Transactions.check_user_by_email(email=registerData[\"email\"],db=db)\n    if exist_userByEmail:\n        raise UserEmailAlreadyExistsException(message=\"This email is already exists in the system. try to login with that email.\")\n    #check user existance by phone number",
+        "detail": "services.AuthService.app.services.registerService",
         "documentation": {}
     },
     {
