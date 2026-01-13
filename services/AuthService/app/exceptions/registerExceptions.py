@@ -22,6 +22,33 @@ class SupabaseApiFailException(RegisterException):
         )
 
 
+class SmsGatewayException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="SMS_GATEWAY_ERROR",
+            error_message=message,
+            status_code=502,
+        )
+
+
+class SmsGatewayConfigException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="SMS_GATEWAY_CONFIG_ERROR",
+            error_message=message,
+            status_code=500,
+        )
+
+
+class InvalidMobileNumberException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="INVALID_MOBILE_NUMBER",
+            error_message=message,
+            status_code=422,
+        )
+
+
 class UserEmailAlreadyExistsException(RegisterException):
     def __init__(self, message: str):
         super().__init__(

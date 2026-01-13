@@ -11,8 +11,8 @@ class Transactions:
             if len(user.data) == 0:
                 return False
             return True
-        except APIError:
-            raise SupabaseApiFailException(message="something happened on our end!")
+        except APIError as exc:
+            raise SupabaseApiFailException(message=str(exc)) from exc
         
 
     #check user existance via email address
@@ -23,5 +23,13 @@ class Transactions:
             if len(user.data) == 0:
                 return False
             return True
-        except APIError:
-            raise SupabaseApiFailException(message="something happened on our end!")              
+        except APIError as exc:
+            raise SupabaseApiFailException(message=str(exc)) from exc
+
+    @staticmethod
+    def create_user(payload: dict, db: Client):
+        try:
+            response = db.table("Users").insert(payload).execute()
+            return response.data
+        except APIError as exc:
+            raise SupabaseApiFailException(message=str(exc)) from exc

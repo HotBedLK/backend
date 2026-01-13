@@ -1,9 +1,8 @@
-from fastapi import FastAPI,Request,status
+from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
 from .api.registerAuth import router as register_router
 from fastapi.exceptions import RequestValidationError
 from .exceptions.registerExceptions import RegisterException
-
 
 
 app = FastAPI(title="Auth Service")

@@ -24,6 +24,22 @@
         "documentation": {}
     },
     {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "UndefinedValueError",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -273,6 +289,32 @@
         "documentation": {}
     },
     {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "secrets",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "secrets",
+        "description": "secrets",
+        "detail": "secrets",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "httpx",
         "kind": 6,
         "isExtraImport": true,
@@ -387,7 +429,7 @@
         "kind": 2,
         "importPath": "services.AuthService.app.api.registerAuth",
         "description": "services.AuthService.app.api.registerAuth",
-        "peekOfCode": "def register(data: RegisterInputSchema, db: Annotated[Client, Depends(get_supabase_client)]):\n    registerService(registerData=data.model_dump(),db=db)",
+        "peekOfCode": "def register(data: RegisterInputSchema, db: Annotated[Client, Depends(get_supabase_client)]):\n    return registerService(registerData=data.model_dump(),db=db)",
         "detail": "services.AuthService.app.api.registerAuth",
         "documentation": {}
     },
@@ -396,7 +438,7 @@
         "kind": 6,
         "importPath": "services.AuthService.app.db.transactions",
         "description": "services.AuthService.app.db.transactions",
-        "peekOfCode": "class Transactions:\n    #check user existance via email address\n    @staticmethod\n    def check_user_by_email(email, db: Client):\n        try:\n            user = db.table(\"Users\").select(\"email\").eq('email',email).execute()\n            if len(user.data) == 0:\n                return False\n            return True\n        except APIError:",
+        "peekOfCode": "class Transactions:\n    #check user existance via email address\n    @staticmethod\n    def check_user_by_email(email, db: Client):\n        try:\n            user = db.table(\"Users\").select(\"email\").eq('email',email).execute()\n            if len(user.data) == 0:\n                return False\n            return True\n        except APIError as exc:",
         "detail": "services.AuthService.app.db.transactions",
         "documentation": {}
     },
@@ -414,7 +456,34 @@
         "kind": 6,
         "importPath": "services.AuthService.app.exceptions.registerExceptions",
         "description": "services.AuthService.app.exceptions.registerExceptions",
-        "peekOfCode": "class SupabaseApiFailException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=500,\n        )\nclass UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "peekOfCode": "class SupabaseApiFailException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=500,\n        )\nclass SmsGatewayException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "SmsGatewayException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class SmsGatewayException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"SMS_GATEWAY_ERROR\",\n            error_message=message,\n            status_code=502,\n        )\nclass SmsGatewayConfigException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "SmsGatewayConfigException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class SmsGatewayConfigException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"SMS_GATEWAY_CONFIG_ERROR\",\n            error_message=message,\n            status_code=500,\n        )\nclass InvalidMobileNumberException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidMobileNumberException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class InvalidMobileNumberException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INVALID_MOBILE_NUMBER\",\n            error_message=message,\n            status_code=422,\n        )\nclass UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
         "detail": "services.AuthService.app.exceptions.registerExceptions",
         "documentation": {}
     },
@@ -450,7 +519,7 @@
         "kind": 6,
         "importPath": "services.AuthService.app.schemas.registerInputSchema",
         "description": "services.AuthService.app.schemas.registerInputSchema",
-        "peekOfCode": "class RegisterInputSchema(BaseModel):\n    first_name: str = Field(..., min_length=1, description=\"First name is required\")\n    last_name: str = Field(..., min_length=1, description=\"Last name is required\")\n    password: str = Field(..., min_length=8, description=\"Password must be at least 8 characters\")\n    mobile_number: str = Field(..., description=\"Mobile number must be 10 digits\")\n    email: EmailStr = Field(..., description=\"A valid email address is required\")\n    @field_validator(\"password\")\n    def validate_password(cls, value):\n        if len(value) < 8:\n            raise ValueError(\"Password must be at least 8 characters long\")",
+        "peekOfCode": "class RegisterInputSchema(BaseModel):\n    first_name: str = Field(\n        ...,\n        min_length=1,\n        description=\"First name is required\",\n        examples=[\"Dumidu\"],\n    )\n    last_name: str = Field(\n        ...,\n        min_length=1,",
         "detail": "services.AuthService.app.schemas.registerInputSchema",
         "documentation": {}
     },
@@ -470,6 +539,60 @@
         "description": "services.AuthService.app.main",
         "peekOfCode": "app = FastAPI(title=\"Auth Service\")\napp.include_router(register_router)\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []\n    for error in exc.errors():\n        messages.append(error[\"msg\"])",
         "detail": "services.AuthService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_otp_code",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def generate_otp_code() -> str:\n    return f\"{secrets.randbelow(1_000_000):06d}\"\ndef hash_otp_code(otp_code: str) -> str:\n    return hashlib.sha256(otp_code.encode(\"utf-8\")).hexdigest()\ndef hash_password(password: str) -> str:\n    salt = secrets.token_bytes(16)\n    derived = hashlib.pbkdf2_hmac(\"sha256\", password.encode(\"utf-8\"), salt, 200_000)\n    return f\"pbkdf2_sha256$200000${salt.hex()}${derived.hex()}\"\ndef build_user_payload(register_data: dict, otp_code: str) -> dict:\n    return {",
+        "detail": "services.AuthService.app.util",
+        "documentation": {}
+    },
+    {
+        "label": "hash_otp_code",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def hash_otp_code(otp_code: str) -> str:\n    return hashlib.sha256(otp_code.encode(\"utf-8\")).hexdigest()\ndef hash_password(password: str) -> str:\n    salt = secrets.token_bytes(16)\n    derived = hashlib.pbkdf2_hmac(\"sha256\", password.encode(\"utf-8\"), salt, 200_000)\n    return f\"pbkdf2_sha256$200000${salt.hex()}${derived.hex()}\"\ndef build_user_payload(register_data: dict, otp_code: str) -> dict:\n    return {\n        \"first_name\": register_data[\"first_name\"],\n        \"last_name\": register_data[\"last_name\"],",
+        "detail": "services.AuthService.app.util",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def hash_password(password: str) -> str:\n    salt = secrets.token_bytes(16)\n    derived = hashlib.pbkdf2_hmac(\"sha256\", password.encode(\"utf-8\"), salt, 200_000)\n    return f\"pbkdf2_sha256$200000${salt.hex()}${derived.hex()}\"\ndef build_user_payload(register_data: dict, otp_code: str) -> dict:\n    return {\n        \"first_name\": register_data[\"first_name\"],\n        \"last_name\": register_data[\"last_name\"],\n        \"password\": hash_password(register_data[\"password\"]),\n        \"mobile_number\": register_data[\"mobile_number\"],",
+        "detail": "services.AuthService.app.util",
+        "documentation": {}
+    },
+    {
+        "label": "build_user_payload",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def build_user_payload(register_data: dict, otp_code: str) -> dict:\n    return {\n        \"first_name\": register_data[\"first_name\"],\n        \"last_name\": register_data[\"last_name\"],\n        \"password\": hash_password(register_data[\"password\"]),\n        \"mobile_number\": register_data[\"mobile_number\"],\n        \"email\": register_data[\"email\"],\n        \"verified\": False,\n        \"verification_token\": hash_otp_code(otp_code),\n        \"verifired_time\": None,",
+        "detail": "services.AuthService.app.util",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp_sms",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def send_otp_sms(recipient: str, otp_code: str) -> None:\n    api_token, sender_id = _get_sms_config()\n    normalized_recipient = normalize_mobile_number(recipient)\n    payload = {\n        \"recipient\": normalized_recipient,\n        \"sender_id\": sender_id,\n        \"type\": \"plain\",\n        \"message\": f\"Your verification code is {otp_code}\",\n    }\n    headers = {",
+        "detail": "services.AuthService.app.util",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_mobile_number",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def normalize_mobile_number(number: str) -> str:\n    cleaned = \"\".join(ch for ch in number if ch.isdigit())\n    if cleaned.startswith(\"0\") and len(cleaned) == 10:\n        return f\"94{cleaned[1:]}\"\n    if cleaned.startswith(\"94\") and len(cleaned) == 11:\n        return cleaned\n    raise InvalidMobileNumberException(\n        message=\"Mobile number must be 10 digits starting with 0 or 11 digits starting with 94.\"\n    )",
+        "detail": "services.AuthService.app.util",
         "documentation": {}
     },
     {
