@@ -1,6 +1,5 @@
 import hashlib
 import secrets
-from datetime import datetime
 
 import httpx
 from decouple import config, UndefinedValueError

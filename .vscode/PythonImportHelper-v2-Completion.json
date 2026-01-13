@@ -32,6 +32,14 @@
         "documentation": {}
     },
     {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
         "label": "UndefinedValueError",
         "importPath": "decouple",
         "description": "decouple",
@@ -46,6 +54,14 @@
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
         "documentation": {}
     },
     {
@@ -102,6 +118,30 @@
         "description": "supabase",
         "isExtraImport": true,
         "detail": "supabase",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -201,6 +241,14 @@
         "documentation": {}
     },
     {
+        "label": "Redis",
+        "importPath": "redis",
+        "description": "redis",
+        "isExtraImport": true,
+        "detail": "redis",
+        "documentation": {}
+    },
+    {
         "label": "Annotated",
         "importPath": "typing",
         "description": "typing",
@@ -214,6 +262,14 @@
         "description": "app.database.supabase",
         "isExtraImport": true,
         "detail": "app.database.supabase",
+        "documentation": {}
+    },
+    {
+        "label": "RateLimiter",
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "isExtraImport": true,
+        "detail": "app.utils.rate_limiter",
         "documentation": {}
     },
     {
@@ -304,14 +360,6 @@
         "importPath": "secrets",
         "description": "secrets",
         "detail": "secrets",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -407,6 +455,24 @@
         "documentation": {}
     },
     {
+        "label": "RateLimiter",
+        "kind": 6,
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "peekOfCode": "class RateLimiter:\n    def __init__(self, limit: int, window_seconds: int, key_prefix: str = \"rl\"):\n        self.limit = limit\n        self.window_seconds = window_seconds\n        self.key_prefix = key_prefix\n    def _build_key(self, request: Request) -> str:\n        client_ip = request.client.host if request.client else \"unknown\"\n        return f\"{self.key_prefix}:{client_ip}:{request.url.path}\"\n    def __call__(self, request: Request) -> None:\n        client = get_redis_client()",
+        "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
+        "label": "get_redis_client",
+        "kind": 2,
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "peekOfCode": "def get_redis_client() -> Redis:\n    return Redis(\n        host=config(\"REDIS_HOST\", default=\"redis_database\"),\n        port=config(\"REDIS_PORT\", default=6379, cast=int),\n        password=config(\"REDIS_PASSWORD\", default=None),\n        db=config(\"REDIS_DB\", default=0, cast=int),\n        decode_responses=True,\n    )\nclass RateLimiter:\n    def __init__(self, limit: int, window_seconds: int, key_prefix: str = \"rl\"):",
+        "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
         "label": "health_check",
         "kind": 2,
         "importPath": "services.AdminService.app.main",
@@ -429,7 +495,7 @@
         "kind": 2,
         "importPath": "services.AuthService.app.api.registerAuth",
         "description": "services.AuthService.app.api.registerAuth",
-        "peekOfCode": "def register(data: RegisterInputSchema, db: Annotated[Client, Depends(get_supabase_client)]):\n    return registerService(registerData=data.model_dump(),db=db)",
+        "peekOfCode": "def register(\n    data: RegisterInputSchema,\n    db: Annotated[Client, Depends(get_supabase_client)],\n    _: Annotated[None, Depends(RateLimiter(limit=5, window_seconds=60, key_prefix=\"register\"))],\n):\n    return registerService(registerData=data.model_dump(),db=db)",
         "detail": "services.AuthService.app.api.registerAuth",
         "documentation": {}
     },
