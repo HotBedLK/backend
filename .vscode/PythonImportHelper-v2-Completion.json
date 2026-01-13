@@ -121,6 +121,22 @@
         "documentation": {}
     },
     {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
         "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -146,6 +162,38 @@
     },
     {
         "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -257,6 +305,38 @@
         "documentation": {}
     },
     {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_supabase_client",
+        "importPath": "app.database.supabase",
+        "description": "app.database.supabase",
+        "isExtraImport": true,
+        "detail": "app.database.supabase",
+        "documentation": {}
+    },
+    {
+        "label": "get_supabase_client",
+        "importPath": "app.database.supabase",
+        "description": "app.database.supabase",
+        "isExtraImport": true,
+        "detail": "app.database.supabase",
+        "documentation": {}
+    },
+    {
         "label": "get_supabase_client",
         "importPath": "app.database.supabase",
         "description": "app.database.supabase",
@@ -266,6 +346,38 @@
     },
     {
         "label": "RateLimiter",
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "isExtraImport": true,
+        "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
+        "label": "RateLimiter",
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "isExtraImport": true,
+        "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
+        "label": "RateLimiter",
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "isExtraImport": true,
+        "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
+        "label": "get_redis_client",
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "isExtraImport": true,
+        "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
+        "label": "get_redis_client",
         "importPath": "app.utils.rate_limiter",
         "description": "app.utils.rate_limiter",
         "isExtraImport": true,
@@ -329,6 +441,174 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "JSONResponse",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
@@ -360,6 +640,14 @@
         "importPath": "secrets",
         "description": "secrets",
         "detail": "secrets",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "importPath": "dateutil",
+        "description": "dateutil",
+        "isExtraImport": true,
+        "detail": "dateutil",
         "documentation": {}
     },
     {
@@ -500,6 +788,42 @@
         "documentation": {}
     },
     {
+        "label": "resend_otp",
+        "kind": 2,
+        "importPath": "services.AuthService.app.api.resendOtpAuth",
+        "description": "services.AuthService.app.api.resendOtpAuth",
+        "peekOfCode": "def resend_otp(\n    data: ResendOtpInputSchema,\n    db: Annotated[Client, Depends(get_supabase_client)],\n    _: Annotated[None, Depends(RateLimiter(limit=5, window_seconds=60, key_prefix=\"resend-otp\"))],\n):\n    return resend_otp_service(resend_data=data.model_dump(), db=db)",
+        "detail": "services.AuthService.app.api.resendOtpAuth",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "services.AuthService.app.api.resendOtpAuth",
+        "description": "services.AuthService.app.api.resendOtpAuth",
+        "peekOfCode": "router = APIRouter(tags=[\"Auth Routes\"])\n@router.post(\"/resend-otp\", description=\"resend otp code\")\ndef resend_otp(\n    data: ResendOtpInputSchema,\n    db: Annotated[Client, Depends(get_supabase_client)],\n    _: Annotated[None, Depends(RateLimiter(limit=5, window_seconds=60, key_prefix=\"resend-otp\"))],\n):\n    return resend_otp_service(resend_data=data.model_dump(), db=db)",
+        "detail": "services.AuthService.app.api.resendOtpAuth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_account",
+        "kind": 2,
+        "importPath": "services.AuthService.app.api.verifyAuth",
+        "description": "services.AuthService.app.api.verifyAuth",
+        "peekOfCode": "def verify_account(\n    data: VerifyInputSchema,\n    db: Annotated[Client, Depends(get_supabase_client)],\n    _: Annotated[None, Depends(RateLimiter(limit=5, window_seconds=60, key_prefix=\"verify\"))],\n):\n    return verify_service(verify_data=data.model_dump(), db=db)",
+        "detail": "services.AuthService.app.api.verifyAuth",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "services.AuthService.app.api.verifyAuth",
+        "description": "services.AuthService.app.api.verifyAuth",
+        "peekOfCode": "router = APIRouter(tags=[\"Auth Routes\"])\n@router.post(\"/verify\", description=\"verify account with otp\")\ndef verify_account(\n    data: VerifyInputSchema,\n    db: Annotated[Client, Depends(get_supabase_client)],\n    _: Annotated[None, Depends(RateLimiter(limit=5, window_seconds=60, key_prefix=\"verify\"))],\n):\n    return verify_service(verify_data=data.model_dump(), db=db)",
+        "detail": "services.AuthService.app.api.verifyAuth",
+        "documentation": {}
+    },
+    {
         "label": "Transactions",
         "kind": 6,
         "importPath": "services.AuthService.app.db.transactions",
@@ -549,7 +873,61 @@
         "kind": 6,
         "importPath": "services.AuthService.app.exceptions.registerExceptions",
         "description": "services.AuthService.app.exceptions.registerExceptions",
-        "peekOfCode": "class InvalidMobileNumberException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INVALID_MOBILE_NUMBER\",\n            error_message=message,\n            status_code=422,\n        )\nclass UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "peekOfCode": "class InvalidMobileNumberException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INVALID_MOBILE_NUMBER\",\n            error_message=message,\n            status_code=422,\n        )\nclass InvalidOtpException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidOtpException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class InvalidOtpException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INVALID_OTP\",\n            error_message=message,\n            status_code=422,\n        )\nclass UserNotFoundException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "UserNotFoundException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class UserNotFoundException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"USER_NOT_FOUND\",\n            error_message=message,\n            status_code=404,\n        )\nclass UserAlreadyVerifiedException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "UserAlreadyVerifiedException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class UserAlreadyVerifiedException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"USER_ALREADY_VERIFIED\",\n            error_message=message,\n            status_code=409,\n        )\nclass OtpExpiredException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "OtpExpiredException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class OtpExpiredException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"OTP_EXPIRED\",\n            error_message=message,\n            status_code=410,\n        )\nclass ResendOtpLimitException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ResendOtpLimitException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class ResendOtpLimitException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"OTP_RESEND_LIMIT\",\n            error_message=message,\n            status_code=429,\n        )\nclass ResendOtpCooldownException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.AuthService.app.exceptions.registerExceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ResendOtpCooldownException",
+        "kind": 6,
+        "importPath": "services.AuthService.app.exceptions.registerExceptions",
+        "description": "services.AuthService.app.exceptions.registerExceptions",
+        "peekOfCode": "class ResendOtpCooldownException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"OTP_RESEND_COOLDOWN\",\n            error_message=message,\n            status_code=429,\n        )\nclass UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
         "detail": "services.AuthService.app.exceptions.registerExceptions",
         "documentation": {}
     },
@@ -590,6 +968,24 @@
         "documentation": {}
     },
     {
+        "label": "ResendOtpInputSchema",
+        "kind": 6,
+        "importPath": "services.AuthService.app.schemas.resendOtpInputSchema",
+        "description": "services.AuthService.app.schemas.resendOtpInputSchema",
+        "peekOfCode": "class ResendOtpInputSchema(BaseModel):\n    email: EmailStr | None = Field(\n        default=None,\n        description=\"Email address used for registration\",\n        examples=[\"user@example.com\"],\n    )\n    mobile_number: str | None = Field(\n        default=None,\n        description=\"Mobile number used for registration (10 digits starting with 0)\",\n        examples=[\"0767722791\"],",
+        "detail": "services.AuthService.app.schemas.resendOtpInputSchema",
+        "documentation": {}
+    },
+    {
+        "label": "VerifyInputSchema",
+        "kind": 6,
+        "importPath": "services.AuthService.app.schemas.verifyInputSchema",
+        "description": "services.AuthService.app.schemas.verifyInputSchema",
+        "peekOfCode": "class VerifyInputSchema(BaseModel):\n    email: EmailStr | None = Field(\n        default=None,\n        description=\"Email address used for registration\",\n        examples=[\"user@example.com\"],\n    )\n    mobile_number: str | None = Field(\n        default=None,\n        description=\"Mobile number used for registration (10 digits starting with 0)\",\n        examples=[\"0767722791\"],",
+        "detail": "services.AuthService.app.schemas.verifyInputSchema",
+        "documentation": {}
+    },
+    {
         "label": "registerService",
         "kind": 2,
         "importPath": "services.AuthService.app.services.registerService",
@@ -599,11 +995,56 @@
         "documentation": {}
     },
     {
+        "label": "resend_otp_service",
+        "kind": 2,
+        "importPath": "services.AuthService.app.services.resendOtpService",
+        "description": "services.AuthService.app.services.resendOtpService",
+        "peekOfCode": "def resend_otp_service(resend_data, db):\n    if resend_data.get(\"email\"):\n        user = Transactions.get_user_for_verification_by_email(\n            email=resend_data[\"email\"], db=db\n        )\n    else:\n        user = Transactions.get_user_for_verification_by_mobile(\n            number=resend_data[\"mobile_number\"], db=db\n        )\n    if not user:",
+        "detail": "services.AuthService.app.services.resendOtpService",
+        "documentation": {}
+    },
+    {
+        "label": "RESEND_LIMIT",
+        "kind": 5,
+        "importPath": "services.AuthService.app.services.resendOtpService",
+        "description": "services.AuthService.app.services.resendOtpService",
+        "peekOfCode": "RESEND_LIMIT = 3\nRESEND_WINDOW_SECONDS = 600\nRESEND_COOLDOWN_SECONDS = 60\ndef resend_otp_service(resend_data, db):\n    if resend_data.get(\"email\"):\n        user = Transactions.get_user_for_verification_by_email(\n            email=resend_data[\"email\"], db=db\n        )\n    else:\n        user = Transactions.get_user_for_verification_by_mobile(",
+        "detail": "services.AuthService.app.services.resendOtpService",
+        "documentation": {}
+    },
+    {
+        "label": "RESEND_WINDOW_SECONDS",
+        "kind": 5,
+        "importPath": "services.AuthService.app.services.resendOtpService",
+        "description": "services.AuthService.app.services.resendOtpService",
+        "peekOfCode": "RESEND_WINDOW_SECONDS = 600\nRESEND_COOLDOWN_SECONDS = 60\ndef resend_otp_service(resend_data, db):\n    if resend_data.get(\"email\"):\n        user = Transactions.get_user_for_verification_by_email(\n            email=resend_data[\"email\"], db=db\n        )\n    else:\n        user = Transactions.get_user_for_verification_by_mobile(\n            number=resend_data[\"mobile_number\"], db=db",
+        "detail": "services.AuthService.app.services.resendOtpService",
+        "documentation": {}
+    },
+    {
+        "label": "RESEND_COOLDOWN_SECONDS",
+        "kind": 5,
+        "importPath": "services.AuthService.app.services.resendOtpService",
+        "description": "services.AuthService.app.services.resendOtpService",
+        "peekOfCode": "RESEND_COOLDOWN_SECONDS = 60\ndef resend_otp_service(resend_data, db):\n    if resend_data.get(\"email\"):\n        user = Transactions.get_user_for_verification_by_email(\n            email=resend_data[\"email\"], db=db\n        )\n    else:\n        user = Transactions.get_user_for_verification_by_mobile(\n            number=resend_data[\"mobile_number\"], db=db\n        )",
+        "detail": "services.AuthService.app.services.resendOtpService",
+        "documentation": {}
+    },
+    {
+        "label": "verify_service",
+        "kind": 2,
+        "importPath": "services.AuthService.app.services.verifyService",
+        "description": "services.AuthService.app.services.verifyService",
+        "peekOfCode": "def verify_service(verify_data, db):\n    if verify_data.get(\"email\"):\n        user = Transactions.get_user_for_verification_by_email(\n            email=verify_data[\"email\"], db=db\n        )\n    else:\n        user = Transactions.get_user_for_verification_by_mobile(\n            number=verify_data[\"mobile_number\"], db=db\n        )\n    if not user:",
+        "detail": "services.AuthService.app.services.verifyService",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "kind": 5,
         "importPath": "services.AuthService.app.main",
         "description": "services.AuthService.app.main",
-        "peekOfCode": "app = FastAPI(title=\"Auth Service\")\napp.include_router(register_router)\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []\n    for error in exc.errors():\n        messages.append(error[\"msg\"])",
+        "peekOfCode": "app = FastAPI(title=\"Auth Service\")\napp.include_router(register_router)\napp.include_router(verify_router)\napp.include_router(resend_otp_router)\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []",
         "detail": "services.AuthService.app.main",
         "documentation": {}
     },
@@ -612,7 +1053,7 @@
         "kind": 2,
         "importPath": "services.AuthService.app.util",
         "description": "services.AuthService.app.util",
-        "peekOfCode": "def generate_otp_code() -> str:\n    return f\"{secrets.randbelow(1_000_000):06d}\"\ndef hash_otp_code(otp_code: str) -> str:\n    return hashlib.sha256(otp_code.encode(\"utf-8\")).hexdigest()\ndef hash_password(password: str) -> str:\n    salt = secrets.token_bytes(16)\n    derived = hashlib.pbkdf2_hmac(\"sha256\", password.encode(\"utf-8\"), salt, 200_000)\n    return f\"pbkdf2_sha256$200000${salt.hex()}${derived.hex()}\"\ndef build_user_payload(register_data: dict, otp_code: str) -> dict:\n    return {",
+        "peekOfCode": "def generate_otp_code() -> str:\n    return f\"{secrets.randbelow(1_000_000):06d}\"\ndef hash_otp_code(otp_code: str) -> str:\n    return hashlib.sha256(otp_code.encode(\"utf-8\")).hexdigest()\ndef is_otp_expired(created_at: str, ttl_minutes: int = 10) -> bool:\n    created_time = parser.isoparse(created_at)\n    if created_time.tzinfo is None:\n        created_time = created_time.replace(tzinfo=timezone.utc)\n    return datetime.now(timezone.utc) > created_time + timedelta(minutes=ttl_minutes)\ndef is_timestamp_expired(expires_at: str) -> bool:",
         "detail": "services.AuthService.app.util",
         "documentation": {}
     },
@@ -621,7 +1062,25 @@
         "kind": 2,
         "importPath": "services.AuthService.app.util",
         "description": "services.AuthService.app.util",
-        "peekOfCode": "def hash_otp_code(otp_code: str) -> str:\n    return hashlib.sha256(otp_code.encode(\"utf-8\")).hexdigest()\ndef hash_password(password: str) -> str:\n    salt = secrets.token_bytes(16)\n    derived = hashlib.pbkdf2_hmac(\"sha256\", password.encode(\"utf-8\"), salt, 200_000)\n    return f\"pbkdf2_sha256$200000${salt.hex()}${derived.hex()}\"\ndef build_user_payload(register_data: dict, otp_code: str) -> dict:\n    return {\n        \"first_name\": register_data[\"first_name\"],\n        \"last_name\": register_data[\"last_name\"],",
+        "peekOfCode": "def hash_otp_code(otp_code: str) -> str:\n    return hashlib.sha256(otp_code.encode(\"utf-8\")).hexdigest()\ndef is_otp_expired(created_at: str, ttl_minutes: int = 10) -> bool:\n    created_time = parser.isoparse(created_at)\n    if created_time.tzinfo is None:\n        created_time = created_time.replace(tzinfo=timezone.utc)\n    return datetime.now(timezone.utc) > created_time + timedelta(minutes=ttl_minutes)\ndef is_timestamp_expired(expires_at: str) -> bool:\n    expiry_time = parser.isoparse(expires_at)\n    if expiry_time.tzinfo is None:",
+        "detail": "services.AuthService.app.util",
+        "documentation": {}
+    },
+    {
+        "label": "is_otp_expired",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def is_otp_expired(created_at: str, ttl_minutes: int = 10) -> bool:\n    created_time = parser.isoparse(created_at)\n    if created_time.tzinfo is None:\n        created_time = created_time.replace(tzinfo=timezone.utc)\n    return datetime.now(timezone.utc) > created_time + timedelta(minutes=ttl_minutes)\ndef is_timestamp_expired(expires_at: str) -> bool:\n    expiry_time = parser.isoparse(expires_at)\n    if expiry_time.tzinfo is None:\n        expiry_time = expiry_time.replace(tzinfo=timezone.utc)\n    return datetime.now(timezone.utc) > expiry_time",
+        "detail": "services.AuthService.app.util",
+        "documentation": {}
+    },
+    {
+        "label": "is_timestamp_expired",
+        "kind": 2,
+        "importPath": "services.AuthService.app.util",
+        "description": "services.AuthService.app.util",
+        "peekOfCode": "def is_timestamp_expired(expires_at: str) -> bool:\n    expiry_time = parser.isoparse(expires_at)\n    if expiry_time.tzinfo is None:\n        expiry_time = expiry_time.replace(tzinfo=timezone.utc)\n    return datetime.now(timezone.utc) > expiry_time\ndef hash_password(password: str) -> str:\n    salt = secrets.token_bytes(16)\n    derived = hashlib.pbkdf2_hmac(\"sha256\", password.encode(\"utf-8\"), salt, 200_000)\n    return f\"pbkdf2_sha256$200000${salt.hex()}${derived.hex()}\"\ndef build_user_payload(register_data: dict, otp_code: str) -> dict:",
         "detail": "services.AuthService.app.util",
         "documentation": {}
     },

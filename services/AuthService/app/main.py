@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
 from .api.registerAuth import router as register_router
+from .api.verifyAuth import router as verify_router
+from .api.resendOtpAuth import router as resend_otp_router
 from fastapi.exceptions import RequestValidationError
 from .exceptions.registerExceptions import RegisterException
 
@@ -10,6 +12,8 @@ app = FastAPI(title="Auth Service")
 
 
 app.include_router(register_router)
+app.include_router(verify_router)
+app.include_router(resend_otp_router)
 
 
 
@@ -42,5 +46,3 @@ async def app_exception_handler(request: Request, exc: RegisterException):
             "status_code": exc.status_code,
         },
     )
-
-

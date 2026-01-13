@@ -1,5 +1,8 @@
 import hashlib
 import secrets
+from datetime import datetime, timedelta, timezone
+
+from dateutil import parser
 
 import httpx
 from decouple import config, UndefinedValueError
@@ -17,6 +20,20 @@ def generate_otp_code() -> str:
 
 def hash_otp_code(otp_code: str) -> str:
     return hashlib.sha256(otp_code.encode("utf-8")).hexdigest()
+
+
+def is_otp_expired(created_at: str, ttl_minutes: int = 10) -> bool:
+    created_time = parser.isoparse(created_at)
+    if created_time.tzinfo is None:
+        created_time = created_time.replace(tzinfo=timezone.utc)
+    return datetime.now(timezone.utc) > created_time + timedelta(minutes=ttl_minutes)
+
+
+def is_timestamp_expired(expires_at: str) -> bool:
+    expiry_time = parser.isoparse(expires_at)
+    if expiry_time.tzinfo is None:
+        expiry_time = expiry_time.replace(tzinfo=timezone.utc)
+    return datetime.now(timezone.utc) > expiry_time
 
 
 def hash_password(password: str) -> str:

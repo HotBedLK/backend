@@ -49,6 +49,60 @@ class InvalidMobileNumberException(RegisterException):
         )
 
 
+class InvalidOtpException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="INVALID_OTP",
+            error_message=message,
+            status_code=422,
+        )
+
+
+class UserNotFoundException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="USER_NOT_FOUND",
+            error_message=message,
+            status_code=404,
+        )
+
+
+class UserAlreadyVerifiedException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="USER_ALREADY_VERIFIED",
+            error_message=message,
+            status_code=409,
+        )
+
+
+class OtpExpiredException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="OTP_EXPIRED",
+            error_message=message,
+            status_code=410,
+        )
+
+
+class ResendOtpLimitException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="OTP_RESEND_LIMIT",
+            error_message=message,
+            status_code=429,
+        )
+
+
+class ResendOtpCooldownException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="OTP_RESEND_COOLDOWN",
+            error_message=message,
+            status_code=429,
+        )
+
+
 class UserEmailAlreadyExistsException(RegisterException):
     def __init__(self, message: str):
         super().__init__(

@@ -3,7 +3,9 @@ from ..exceptions.registerExceptions import (
     UserEmailAlreadyExistsException,
     UserNumberAlreadyExistsException,
 )
-from ..util import build_user_payload, generate_otp_code, send_otp_sms
+from datetime import datetime, timedelta, timezone
+
+from ..util import build_user_payload, generate_otp_code, hash_otp_code, send_otp_sms
 
 def registerService(registerData,db):
     """
@@ -23,10 +25,25 @@ def registerService(registerData,db):
 
     otp_code = generate_otp_code()
     payload = build_user_payload(registerData, otp_code)
-    Transactions.create_user(payload=payload, db=db)
+    created_users = Transactions.create_user(payload=payload, db=db)
+    user_id = created_users[0]["id"] if created_users else None
+
+    if user_id:
+        sent_at = datetime.now(timezone.utc)
+        expires_at = sent_at + timedelta(minutes=10)
+        Transactions.create_otp_attempt(
+            payload={
+                "user_id": user_id,
+                "otp_hash": hash_otp_code(otp_code),
+                "sent_at": sent_at.isoformat(),
+                "expires_at": expires_at.isoformat(),
+                "send_count": 1,
+                "status": "sent",
+            },
+            db=db,
+        )
     send_otp_sms(recipient=registerData["mobile_number"], otp_code=otp_code)
     return {
         "status": "success",
         "message": "User created. Verification code sent.",
     }
-
