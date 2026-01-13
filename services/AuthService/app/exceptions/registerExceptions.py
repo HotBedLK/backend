@@ -38,3 +38,11 @@ class UserNumberAlreadyExistsException(RegisterException):
             error_message=message,
             status_code=401,
         )
+
+class credencialsNotMatchedException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="CREDENCIALS_NOT_MATCHED",
+            error_message=message,
+            status_code=401,
+        )

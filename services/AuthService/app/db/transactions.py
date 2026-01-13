@@ -25,3 +25,17 @@ class Transactions:
             return True
         except APIError:
             raise SupabaseApiFailException(message="something happened on our end!")              
+        
+    # check mobile number is exist or not
+    @staticmethod
+    def check_user_by_mobile_number(number, db: Client):
+        try:
+            user = db.table("Users").select("mobile_number").eq('mobile_number',number).execute()
+            if len(user.data) == 0:
+                return False
+            return {
+                'data' : user.data[0],
+                'status' : True
+            }
+        except APIError:
+            raise SupabaseApiFailException(message="something happened on our end!")

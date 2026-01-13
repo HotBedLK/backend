@@ -25,6 +25,3 @@ app.mount("/general",general_user_service_app)
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
-
-
-
