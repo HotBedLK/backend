@@ -2,13 +2,18 @@ from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from services.GeneralUserService.app.exceptions.generalUserEXceptions import GeneralUserExceptions
+from .api.FetchLandingDemoPosts import router as FetchLandingDemoPostsRouter 
 
 
 app = FastAPI(title="Generaluser Service")
 
+app.include_router(FetchLandingDemoPostsRouter)
+
 @app.get("/health")
 def health_check():
     return {"status": "ok", "service": "user"}
+
+
 
 
 

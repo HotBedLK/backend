@@ -137,6 +137,14 @@
         "documentation": {}
     },
     {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
         "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -258,6 +266,22 @@
     },
     {
         "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -342,6 +366,22 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_supabase_client",
+        "importPath": "app.database.supabase",
+        "description": "app.database.supabase",
+        "isExtraImport": true,
+        "detail": "app.database.supabase",
         "documentation": {}
     },
     {
@@ -1213,6 +1253,15 @@
         "documentation": {}
     },
     {
+        "label": "register",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
+        "description": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
+        "peekOfCode": "def register(db: Annotated[Client, Depends(get_supabase_client)]):\n    pass",
+        "detail": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
+        "documentation": {}
+    },
+    {
         "label": "GeneralUserExceptions",
         "kind": 6,
         "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
@@ -1235,7 +1284,7 @@
         "kind": 5,
         "importPath": "services.GeneralUserService.app.main",
         "description": "services.GeneralUserService.app.main",
-        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []",
+        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\napp.include_router(FetchLandingDemoPostsRouter)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):",
         "detail": "services.GeneralUserService.app.main",
         "documentation": {}
     },
