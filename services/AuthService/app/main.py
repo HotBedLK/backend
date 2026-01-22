@@ -5,7 +5,7 @@ from .api.verifyAuth import router as verify_router
 from .api.resendOtpAuth import router as resend_otp_router
 from fastapi.exceptions import RequestValidationError
 from .exceptions.registerExceptions import RegisterException
-from .api.loginAuth import router as login_router
+
 
 app = FastAPI(title="Auth Service")
 
@@ -14,7 +14,6 @@ app = FastAPI(title="Auth Service")
 app.include_router(register_router)
 app.include_router(verify_router)
 app.include_router(resend_otp_router)
-app.include_router(login_router)
 
 
 

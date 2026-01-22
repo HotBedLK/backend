@@ -660,6 +660,14 @@
         "documentation": {}
     },
     {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
         "label": "get_supabase_client",
         "importPath": "app.database",
         "description": "app.database",
@@ -1206,7 +1214,16 @@
         "kind": 5,
         "importPath": "server",
         "description": "server",
-        "peekOfCode": "app = FastAPI(title=\"Main API\")\napp.mount(\"/auth\", auth_service_app)\napp.mount(\"/admin\", admin_service_app)\napp.mount(\"/notification\",notification_service_app)\napp.mount(\"/general\",general_user_service_app)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\"}",
+        "peekOfCode": "app = FastAPI(title=\"Main API\")\n#cores add kara\ncors_origins = [origin.strip() for origin in os.getenv(\"CORS_ALLOW_ORIGINS\", \"*\").split(\",\") if origin.strip()]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=cors_origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)",
+        "detail": "server",
+        "documentation": {}
+    },
+    {
+        "label": "cors_origins",
+        "kind": 5,
+        "importPath": "server",
+        "description": "server",
+        "peekOfCode": "cors_origins = [origin.strip() for origin in os.getenv(\"CORS_ALLOW_ORIGINS\", \"*\").split(\",\") if origin.strip()]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=cors_origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\napp.mount(\"/auth\", auth_service_app)\napp.mount(\"/admin\", admin_service_app)",
         "detail": "server",
         "documentation": {}
     }
