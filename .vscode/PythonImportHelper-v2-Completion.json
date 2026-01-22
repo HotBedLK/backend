@@ -281,14 +281,6 @@
         "documentation": {}
     },
     {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
         "label": "Request",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -1234,7 +1226,7 @@
         "kind": 2,
         "importPath": "services.GeneralUserService.app.main",
         "description": "services.GeneralUserService.app.main",
-        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "peekOfCode": "def health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []\n    for error in exc.errors():\n        messages.append(error[\"msg\"])",
         "detail": "services.GeneralUserService.app.main",
         "documentation": {}
     },
@@ -1243,17 +1235,8 @@
         "kind": 5,
         "importPath": "services.GeneralUserService.app.main",
         "description": "services.GeneralUserService.app.main",
-        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
+        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []",
         "detail": "services.GeneralUserService.app.main",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "kind": 5,
-        "importPath": "services.GeneralUserService.main",
-        "description": "services.GeneralUserService.main",
-        "peekOfCode": "app = FastAPI(title=\"Auth Service\")\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []\n    for error in exc.errors():\n        messages.append(error[\"msg\"])\n    return JSONResponse(",
-        "detail": "services.GeneralUserService.main",
         "documentation": {}
     },
     {
