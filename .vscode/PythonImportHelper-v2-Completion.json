@@ -265,7 +265,39 @@
         "documentation": {}
     },
     {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -617,6 +649,22 @@
         "documentation": {}
     },
     {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "RequestValidationError",
+        "importPath": "fastapi.exceptions",
+        "description": "fastapi.exceptions",
+        "isExtraImport": true,
+        "detail": "fastapi.exceptions",
+        "documentation": {}
+    },
+    {
         "label": "RequestValidationError",
         "importPath": "fastapi.exceptions",
         "description": "fastapi.exceptions",
@@ -657,6 +705,14 @@
         "importPath": "httpx",
         "description": "httpx",
         "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserExceptions",
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
         "documentation": {}
     },
     {
@@ -1165,6 +1221,15 @@
         "documentation": {}
     },
     {
+        "label": "GeneralUserExceptions",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "peekOfCode": "class GeneralUserExceptions(Exception):\n    def __init__(\n        self,\n        error_code: str,\n        error_message: str,\n        status_code: int = 400,\n    ):\n        self.error_code = error_code\n        self.error_message = error_message\n        self.status_code = status_code",
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
         "label": "health_check",
         "kind": 2,
         "importPath": "services.GeneralUserService.app.main",
@@ -1180,6 +1245,15 @@
         "description": "services.GeneralUserService.app.main",
         "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}",
         "detail": "services.GeneralUserService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "services.GeneralUserService.main",
+        "description": "services.GeneralUserService.main",
+        "peekOfCode": "app = FastAPI(title=\"Auth Service\")\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):\n    messages = []\n    for error in exc.errors():\n        messages.append(error[\"msg\"])\n    return JSONResponse(",
+        "detail": "services.GeneralUserService.main",
         "documentation": {}
     },
     {
