@@ -12,3 +12,13 @@ class GeneralUserExceptions(Exception):
         self.status_code = status_code
 
 
+class SupabaseApiFailException(GeneralUserExceptions):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="INTERNAL_SERVER_ERROR",
+            error_message=message,
+            status_code=500,
+        )
+
+
+

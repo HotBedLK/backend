@@ -145,6 +145,14 @@
         "documentation": {}
     },
     {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
         "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -290,6 +298,14 @@
     },
     {
         "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -377,6 +393,54 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "get_supabase_client",
         "importPath": "app.database.supabase",
         "description": "app.database.supabase",
@@ -446,6 +510,14 @@
         "description": "app.utils.rate_limiter",
         "isExtraImport": true,
         "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
+        "label": "APIError",
+        "importPath": "postgrest.exceptions",
+        "description": "postgrest.exceptions",
+        "isExtraImport": true,
+        "detail": "postgrest.exceptions",
         "documentation": {}
     },
     {
@@ -578,6 +650,22 @@
     },
     {
         "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -737,6 +825,39 @@
         "importPath": "httpx",
         "description": "httpx",
         "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "FetchLandingDemoPostsService",
+        "importPath": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "description": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "documentation": {}
+    },
+    {
+        "label": "LandingDemoPostsResponse",
+        "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Transactions",
+        "importPath": "services.GeneralUserService.app.db.transaction",
+        "description": "services.GeneralUserService.app.db.transaction",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.db.transaction",
         "documentation": {}
     },
     {
@@ -1257,8 +1378,17 @@
         "kind": 2,
         "importPath": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
         "description": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
-        "peekOfCode": "def register(db: Annotated[Client, Depends(get_supabase_client)]):\n    pass",
+        "peekOfCode": "def register(db: Annotated[Client, Depends(get_supabase_client)]):\n    demo_properties = FetchLandingDemoPostsService(db=db)\n    return LandingDemoPostsResponse(\n        succuss=True,\n        message=\"Landng page post retrived succuss!\",\n        total_available_properties=len(demo_properties.data),\n        properties=demo_properties.data\n    )",
         "detail": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
+        "documentation": {}
+    },
+    {
+        "label": "Transactions",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.db.transaction",
+        "description": "services.GeneralUserService.app.db.transaction",
+        "peekOfCode": "class Transactions:\n    \"\"\"\n    Repository layer for interacting with the database\n    \"\"\"\n    @staticmethod\n    def FetchLandingDemoPostsRepoFunc(db: Client,limit: Optional[int] = 12) -> List[Dict[str, Any]]:\n        \"\"\"\n        get demo 12 posts from database\n        \"\"\"\n        try:",
+        "detail": "services.GeneralUserService.app.db.transaction",
         "documentation": {}
     },
     {
@@ -1268,6 +1398,51 @@
         "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
         "peekOfCode": "class GeneralUserExceptions(Exception):\n    def __init__(\n        self,\n        error_code: str,\n        error_message: str,\n        status_code: int = 400,\n    ):\n        self.error_code = error_code\n        self.error_message = error_message\n        self.status_code = status_code",
         "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "SupabaseApiFailException",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "peekOfCode": "class SupabaseApiFailException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=500,\n        )",
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ImageModel",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "peekOfCode": "class ImageModel(BaseModel):\n    id:str = Field(...)\n    image:str = Field(...)\nclass PropertyModel(BaseModel):\n    id:str = Field(...)\n    property_type:str  = Field(...)\n    price:float = Field(...)\n    location_name:str = Field(...)\n    Images:Optional[List[ImageModel]]\nclass LandingDemoPostsResponse(BaseModel):",
+        "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "documentation": {}
+    },
+    {
+        "label": "PropertyModel",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "peekOfCode": "class PropertyModel(BaseModel):\n    id:str = Field(...)\n    property_type:str  = Field(...)\n    price:float = Field(...)\n    location_name:str = Field(...)\n    Images:Optional[List[ImageModel]]\nclass LandingDemoPostsResponse(BaseModel):\n    succuss:bool = Field(True)\n    status:int = Field(status.HTTP_200_OK)\n    message:Optional[str] = Field(None)",
+        "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "documentation": {}
+    },
+    {
+        "label": "LandingDemoPostsResponse",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "peekOfCode": "class LandingDemoPostsResponse(BaseModel):\n    succuss:bool = Field(True)\n    status:int = Field(status.HTTP_200_OK)\n    message:Optional[str] = Field(None)\n    total_available_properties:Optional[int]\n    properties:Optional[List[PropertyModel]]",
+        "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "documentation": {}
+    },
+    {
+        "label": "FetchLandingDemoPostsService",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "description": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "peekOfCode": "def FetchLandingDemoPostsService(db):\n    #call repo layer and get 12 posts\n    return Transactions.FetchLandingDemoPostsRepoFunc(db=db,limit=12)",
+        "detail": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
         "documentation": {}
     },
     {
