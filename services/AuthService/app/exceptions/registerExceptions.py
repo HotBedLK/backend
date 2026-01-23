@@ -1,5 +1,6 @@
 from fastapi import HTTPException
 
+
 class RegisterException(Exception):
     def __init__(
         self,
@@ -7,10 +8,21 @@ class RegisterException(Exception):
         error_message: str,
         status_code: int = 400,
     ):
+        
+        super().__init__(error_message)
+
         self.error_code = error_code
         self.error_message = error_message
         self.status_code = status_code
 
+    # Optional: helpful for debugging / logs
+    def __repr__(self) -> str:
+        return (
+            f"{self.__class__.__name__}("
+            f"error_code={self.error_code!r}, "
+            f"status_code={self.status_code!r}, "
+            f"error_message={self.error_message!r})"
+        )
 
 
 class SupabaseApiFailException(RegisterException):
@@ -108,7 +120,7 @@ class UserEmailAlreadyExistsException(RegisterException):
         super().__init__(
             error_code="DUPLICATE_USER_CREATION",
             error_message=message,
-            status_code=401,
+            status_code=409,  
         )
 
 
@@ -117,7 +129,7 @@ class UserNumberAlreadyExistsException(RegisterException):
         super().__init__(
             error_code="DUPLICATE_USER_CREATION",
             error_message=message,
-            status_code=401,
+            status_code=409,  
         )
 
 class credencialsNotMatchedException(RegisterException):

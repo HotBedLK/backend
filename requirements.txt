@@ -23,6 +23,7 @@ httptools==0.7.1
 httpx==0.28.1
 hyperframe==6.1.0
 idna==3.11
+iniconfig==2.3.0
 Jinja2==3.1.6
 markdown-it-py==4.0.0
 MarkupSafe==3.0.3
@@ -30,6 +31,7 @@ mdurl==0.1.2
 mmh3==5.2.0
 multidict==6.7.0
 packaging==25.0
+pluggy==1.6.0
 postgrest==2.27.1
 propcache==0.4.1
 pycparser==2.23
@@ -42,13 +44,14 @@ pyiceberg==0.10.0
 PyJWT==2.10.1
 pyparsing==3.3.1
 pyroaring==1.0.3
+pytest==9.0.2
 python-dateutil==2.9.0.post0
 python-decouple==3.8
 python-dotenv==1.2.1
 python-multipart==0.0.21
 PyYAML==6.0.3
 realtime==2.27.1
-redis==5.0.8
+redis==7.1.0
 requests==2.32.5
 rich==14.2.0
 rich-toolkit==0.17.1
