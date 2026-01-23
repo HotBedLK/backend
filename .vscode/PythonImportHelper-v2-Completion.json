@@ -329,6 +329,14 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -1774,6 +1782,15 @@
         "description": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
         "peekOfCode": "def register(db: Annotated[Client, Depends(get_supabase_client)]):\n    demo_properties = FetchLandingDemoPostsService(db=db)\n    return LandingDemoPostsResponse(\n        succuss=True,\n        message=\"Landng page post retrived succuss!\",\n        total_available_properties=demo_properties.total_available_properties,\n        properties=demo_properties.properties\n    )",
         "detail": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
+        "documentation": {}
+    },
+    {
+        "label": "PostDetailsController",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.api.LandingPagePostDetails",
+        "description": "services.GeneralUserService.app.api.LandingPagePostDetails",
+        "peekOfCode": "def PostDetailsController():\n    pass",
+        "detail": "services.GeneralUserService.app.api.LandingPagePostDetails",
         "documentation": {}
     },
     {

@@ -11,7 +11,7 @@ from services.GeneralUserService.app.schemas.LandingDemoPostsResponse import (
 router  = APIRouter(tags=["General user routes"])
 
 #route for get random 12 post from the database
-@router.get("/demos",description="get random 12 post from the database",response_model=LandingDemoPostsResponse)
+@router.get("/landing-feed",description="get random 12 post from the database",response_model=LandingDemoPostsResponse)
 def register(db: Annotated[Client, Depends(get_supabase_client)]):
     demo_properties = FetchLandingDemoPostsService(db=db)
     return LandingDemoPostsResponse(
@@ -19,4 +19,4 @@ def register(db: Annotated[Client, Depends(get_supabase_client)]):
         message="Landng page post retrived succuss!",
         total_available_properties=demo_properties.total_available_properties,
         properties=demo_properties.properties
-    )
+    ) 
