@@ -131,3 +131,35 @@ class UserNumberAlreadyExistsException(RegisterException):
             error_message=message,
             status_code=409,  
         )
+
+class credencialsNotMatchedException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="CREDENCIALS_NOT_MATCHED",
+            error_message=message,
+            status_code=401,
+        )
+
+class databaseUpdateFaildException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="DATABASE_UPDATE_FAILD",
+            error_message=message,
+            status_code=500,
+        )
+
+class vefiricationCodeNotFoundException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="VEFIRICATION_CODE_NOT_FOUND",
+            error_message=message,
+            status_code=404,
+        )
+
+class userNotAllowedToModified(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="USER_NOT_ALLOWED_TO_MODIFIED",
+            error_message=message,
+            status_code=403,
+        )
