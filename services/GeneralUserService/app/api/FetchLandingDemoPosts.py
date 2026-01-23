@@ -19,4 +19,4 @@ def register(db: Annotated[Client, Depends(get_supabase_client)]):
         message="Landng page post retrived succuss!",
         total_available_properties=demo_properties.total_available_properties,
         properties=demo_properties.properties
-    )
+    ) 

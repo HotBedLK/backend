@@ -2,6 +2,8 @@
 from datetime import datetime
 from typing import Any, List, Optional, Tuple
 from pydantic import BaseModel, Field, ConfigDict
+import random
+
 
 
 
@@ -235,3 +237,163 @@ def transform_separate_responses(property_resp: Any, features_resp: Any) -> Sing
 
     post = _build_single_post(property_obj, feature_obj)
     return SinglePostResponse(data=[post], count=prop_count)
+
+
+
+
+
+class PropertyCardDTO(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    location_name: str
+    price: int
+
+
+class NearbyServicesRandomDTO(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    Gym: List[Any] = Field(default_factory=list)
+    Hospital: List[Any] = Field(default_factory=list)
+    Schools: List[Any] = Field(default_factory=list)
+    Supermarket: List[Any] = Field(default_factory=list)
+    Bills: List[Any] = Field(default_factory=list)
+
+
+class LandingDemoPostDTO(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    property: PropertyCardDTO
+    owner_of_the_property: Optional[UserRow] = None  
+    nearby_services: NearbyServicesRandomDTO
+
+
+class LandingDemoPostsResponse(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    data: List[LandingDemoPostDTO] = Field(default_factory=list)
+    count: Optional[int] = None
+
+
+def _pick_one(items: Any) -> List[Any]:
+    """
+    Picks one random element from a list and returns it as a single-item list.
+    Returns [] if items is None, not a list, or empty.
+    """
+    if not items or not isinstance(items, list):
+        return []
+    return [random.choice(items)] if items else []
+
+
+def _build_landing_demo_post(property_obj: PropertyRow) -> LandingDemoPostDTO:
+    """
+    Builds the limited DTO for landing/demo posts:
+      - property: location_name, price
+      - owner_of_the_property: first_name, last_name (via UserRow)
+      - nearby_services: ONE random item per category
+    """
+    prop_card = PropertyCardDTO(
+        location_name=property_obj.location_name,
+        price=property_obj.price,
+    )
+
+    nearby_random = NearbyServicesRandomDTO.model_validate(
+        {
+            "Gym": _pick_one(property_obj.Gym),
+            "Hospital": _pick_one(property_obj.Hospital),
+            "Schools": _pick_one(property_obj.Schools),
+            "Supermarket": _pick_one(property_obj.Supermarket),
+            "Bills": _pick_one(property_obj.Bills),
+        }
+    )
+
+    return LandingDemoPostDTO(
+        property=prop_card,
+        owner_of_the_property=property_obj.Users,
+        nearby_services=nearby_random,
+    )
+
+
+def transform_landing_demo_posts(property_resp: Any) -> LandingDemoPostsResponse:
+    """
+    Transformer for the new landing/demo endpoint.
+    Expects a response like:
+    """
+    raw_list, count = _unwrap_resp(property_resp)  
+
+    if not raw_list:
+        return LandingDemoPostsResponse(data=[], count=count)
+
+    posts: List[LandingDemoPostDTO] = []
+    for row in raw_list:
+        property_obj = PropertyRow.model_validate(row)
+        posts.append(_build_landing_demo_post(property_obj))
+
+    return LandingDemoPostsResponse(data=posts, count=count)
+
+
+def transform_landing_demo_post_details(single_post_resp: Any) -> LandingDemoPostsResponse:
+    """
+    Accepts:
+      - SinglePostResponse (your existing response model)
+      - or dict shaped like {"data":[...], "count":...}
+    """
+
+    raw_list, count = _unwrap_resp(single_post_resp)  
+
+    if not raw_list:
+        return LandingDemoPostsResponse(data=[], count=count)
+
+    first = raw_list[0]
+
+    if hasattr(first, "property"):
+        prop = first.property
+        owner = getattr(first, "owner_of_the_property", None)
+        nearby = getattr(first, "nearby_services", None)
+
+        nearby_random = NearbyServicesRandomDTO.model_validate(
+            {
+                "Gym": _pick_one(getattr(nearby, "Gym", [])),
+                "Hospital": _pick_one(getattr(nearby, "Hospital", [])),
+                "Schools": _pick_one(getattr(nearby, "Schools", [])),
+                "Supermarket": _pick_one(getattr(nearby, "Supermarket", [])),
+                "Bills": _pick_one(getattr(nearby, "Bills", [])),
+            }
+        )
+
+        post = LandingDemoPostDTO(
+            property=PropertyCardDTO(
+                location_name=getattr(prop, "location_name", ""),
+                price=getattr(prop, "price", 0),
+            ),
+            owner_of_the_property=owner,
+            nearby_services=nearby_random,
+        )
+        return LandingDemoPostsResponse(data=[post], count=count)
+
+    if isinstance(first, dict):
+        prop_dict = first.get("property") or {}
+        owner_dict = first.get("owner_of_the_property")
+        nearby_dict = first.get("nearby_services") or {}
+
+        nearby_random = NearbyServicesRandomDTO.model_validate(
+            {
+                "Gym": _pick_one(nearby_dict.get("Gym", [])),
+                "Hospital": _pick_one(nearby_dict.get("Hospital", [])),
+                "Schools": _pick_one(nearby_dict.get("Schools", [])),
+                "Supermarket": _pick_one(nearby_dict.get("Supermarket", [])),
+                "Bills": _pick_one(nearby_dict.get("Bills", [])),
+            }
+        )
+
+        post = LandingDemoPostDTO(
+            property=PropertyCardDTO(
+                location_name=prop_dict.get("location_name", ""),
+                price=prop_dict.get("price", 0),
+            ),
+            owner_of_the_property=UserRow.model_validate(owner_dict) if owner_dict else None,
+            nearby_services=nearby_random,
+        )
+        return LandingDemoPostsResponse(data=[post], count=count)
+
+    # Unknown shape
+    return LandingDemoPostsResponse(data=[], count=count)
+

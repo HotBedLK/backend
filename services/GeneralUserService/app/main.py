@@ -4,12 +4,13 @@ from fastapi.exceptions import RequestValidationError
 from services.GeneralUserService.app.exceptions.generalUserEXceptions import GeneralUserExceptions
 from .api.FetchLandingDemoPosts import router as FetchLandingDemoPostsRouter 
 from .api.SinglePropertyDetails import router as SinglePropertyDetailsRouter 
-
+from .api.LandingPagePostDetails import router as LandingPagePostDetails 
 
 app = FastAPI(title="Generaluser Service")
 
 app.include_router(FetchLandingDemoPostsRouter)
 app.include_router(SinglePropertyDetailsRouter)
+app.include_router(LandingPagePostDetails)
 
 @app.get("/health")
 def health_check():
