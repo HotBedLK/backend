@@ -111,3 +111,6 @@ def normalize_mobile_number(number: str) -> str:
     raise InvalidMobileNumberException(
         message="Mobile number must be 10 digits starting with 0 or 11 digits starting with 94."
     )
+
+def compair_otp_codes(provided_otp: str, stored_hashed_otp: str) -> bool:
+    return hash_otp_code(str(provided_otp)) == stored_hashed_otp

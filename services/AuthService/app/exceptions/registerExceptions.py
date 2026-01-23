@@ -135,3 +135,11 @@ class databaseUpdateFaildException(RegisterException):
             error_message=message,
             status_code=500,
         )
+
+class vefiricationCodeNotFoundException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="VEFIRICATION_CODE_NOT_FOUND",
+            error_message=message,
+            status_code=404,
+        )

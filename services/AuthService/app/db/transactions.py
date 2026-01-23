@@ -136,3 +136,59 @@ class Transactions:
                 }
         except APIError as exc:
             raise SupabaseApiFailException(message=str(exc)) from exc
+
+    @staticmethod
+    def get_newest_otp_by_userid(user_id:str, db:Client):
+        try:
+            otp_record = (
+                db.table("otp_attempts")
+                .select("*")
+                .eq("user_id", user_id)
+                .order("sent_at", desc=True)
+                .limit(1)
+                .execute()
+            )
+            if len(otp_record.data) != 0:
+                return {
+                    'data' : otp_record.data,
+                    'status' : True
+                }
+            else:
+                return {
+                    'data' : otp_record.data,
+                    'status' : False     
+                }
+        except APIError as exc:
+            raise SupabaseApiFailException(message=str(exc)) from exc
+
+    @staticmethod
+    def update_otp_attempt_status(otp_id: str, status: str, db: Client):
+        try:
+            response = (
+                db.table("otp_attempts")
+                .update({"status": status})
+                .eq("id", otp_id)
+                .execute()
+            )
+            if len(response.data) == 0:
+                return False
+            else:
+                return True
+        except APIError as exc:
+            raise SupabaseApiFailException(message=str(exc)) from exc
+
+    @staticmethod
+    def change_modify_account_status(id : str, status : bool, db : Client):
+        try:
+            response = (
+                db.table("Users")
+                .update({"modify_account": status})
+                .eq("id", id)
+                .execute()
+            )
+            if len(response.data) == 0:
+                return False
+            else:
+                return True
+        except APIError as exc:
+            raise SupabaseApiFailException(message=str(exc)) from exc

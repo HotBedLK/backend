@@ -26,7 +26,6 @@ def checkMobileNumber(data, db):
     sent_at = datetime.now(timezone.utc)
     expires_at = sent_at + timedelta(minutes=10)
 
-    print('pass five')
     store = Transactions.create_otp_attempt(
         payload={
                 "user_id": checkDb['data'][0]['id'],

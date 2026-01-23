@@ -7,6 +7,7 @@ from fastapi.exceptions import RequestValidationError
 from .exceptions.registerExceptions import RegisterException
 from .api.loginAuth import router_login as login_routerr
 from .api.checkMobileNumber import router_login as checkMobile_router
+from .api.vefiryMobileNumber import router_login as verify_mobile_router
 
 app = FastAPI(title="Auth Service")
 
@@ -17,6 +18,7 @@ app.include_router(verify_router)
 app.include_router(resend_otp_router)
 app.include_router(login_routerr)
 app.include_router(checkMobile_router)
+app.include_router(verify_mobile_router)
 
 
 @app.exception_handler(RequestValidationError)
