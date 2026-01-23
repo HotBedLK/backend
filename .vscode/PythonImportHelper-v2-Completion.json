@@ -177,6 +177,14 @@
         "documentation": {}
     },
     {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
         "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -322,6 +330,14 @@
     },
     {
         "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -450,6 +466,14 @@
     },
     {
         "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -601,6 +625,14 @@
         "documentation": {}
     },
     {
+        "label": "get_supabase_client",
+        "importPath": "app.database.supabase",
+        "description": "app.database.supabase",
+        "isExtraImport": true,
+        "detail": "app.database.supabase",
+        "documentation": {}
+    },
+    {
         "label": "RateLimiter",
         "importPath": "app.utils.rate_limiter",
         "description": "app.utils.rate_limiter",
@@ -662,6 +694,15 @@
         "description": "postgrest.exceptions",
         "isExtraImport": true,
         "detail": "postgrest.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "pydantic",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -1078,6 +1119,14 @@
         "documentation": {}
     },
     {
+        "label": "transform_landing_demo_post_details",
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
         "label": "GeneralUserCacheStorageException",
         "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
         "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
@@ -1134,6 +1183,14 @@
         "documentation": {}
     },
     {
+        "label": "GetLandingPagePostDetailsService",
+        "importPath": "services.GeneralUserService.app.services.LandingPagePostDetailsService",
+        "description": "services.GeneralUserService.app.services.LandingPagePostDetailsService",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.services.LandingPagePostDetailsService",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "importPath": "services.AdminService.app.main",
         "description": "services.AdminService.app.main",
@@ -1155,6 +1212,23 @@
         "description": "services.GeneralUserService.app.services.GetSinglePostService",
         "isExtraImport": true,
         "detail": "services.GeneralUserService.app.services.GetSinglePostService",
+        "documentation": {}
+    },
+    {
+        "label": "GetSinglePostService",
+        "importPath": "services.GeneralUserService.app.services.GetSinglePostService",
+        "description": "services.GeneralUserService.app.services.GetSinglePostService",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.services.GetSinglePostService",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
         "documentation": {}
     },
     {
@@ -1789,7 +1863,7 @@
         "kind": 2,
         "importPath": "services.GeneralUserService.app.api.LandingPagePostDetails",
         "description": "services.GeneralUserService.app.api.LandingPagePostDetails",
-        "peekOfCode": "def PostDetailsController():\n    pass",
+        "peekOfCode": "def PostDetailsController(property_id:str,db: Annotated[Client, Depends(get_supabase_client)]):\n    return GetLandingPagePostDetailsService(db=db,post_id=property_id)",
         "detail": "services.GeneralUserService.app.api.LandingPagePostDetails",
         "documentation": {}
     },
@@ -1992,6 +2066,42 @@
         "documentation": {}
     },
     {
+        "label": "PropertyCardDTO",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class PropertyCardDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    location_name: str\n    price: int\nclass NearbyServicesRandomDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    Gym: List[Any] = Field(default_factory=list)\n    Hospital: List[Any] = Field(default_factory=list)\n    Schools: List[Any] = Field(default_factory=list)\n    Supermarket: List[Any] = Field(default_factory=list)",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "NearbyServicesRandomDTO",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class NearbyServicesRandomDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    Gym: List[Any] = Field(default_factory=list)\n    Hospital: List[Any] = Field(default_factory=list)\n    Schools: List[Any] = Field(default_factory=list)\n    Supermarket: List[Any] = Field(default_factory=list)\n    Bills: List[Any] = Field(default_factory=list)\nclass LandingDemoPostDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    property: PropertyCardDTO",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "LandingDemoPostDTO",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class LandingDemoPostDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    property: PropertyCardDTO\n    owner_of_the_property: Optional[UserRow] = None  \n    nearby_services: NearbyServicesRandomDTO\nclass LandingDemoPostsResponse(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    data: List[LandingDemoPostDTO] = Field(default_factory=list)\n    count: Optional[int] = None\ndef _pick_one(items: Any) -> List[Any]:",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "LandingDemoPostsResponse",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class LandingDemoPostsResponse(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    data: List[LandingDemoPostDTO] = Field(default_factory=list)\n    count: Optional[int] = None\ndef _pick_one(items: Any) -> List[Any]:\n    \"\"\"\n    Picks one random element from a list and returns it as a single-item list.\n    Returns [] if items is None, not a list, or empty.\n    \"\"\"\n    if not items or not isinstance(items, list):",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
         "label": "transform_combined_payload",
         "kind": 2,
         "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
@@ -2006,6 +2116,24 @@
         "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
         "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
         "peekOfCode": "def transform_separate_responses(property_resp: Any, features_resp: Any) -> SinglePostResponse:\n    prop_list, prop_count = _unwrap_resp(property_resp)\n    if not prop_list:\n        return SinglePostResponse(data=[], count=prop_count)\n    property_obj = PropertyRow.model_validate(prop_list[0])\n    feat_list, _ = _unwrap_resp(features_resp)\n    feature_obj: Optional[BodimFeatureRow] = None\n    if feat_list and isinstance(feat_list[0], dict) and \"attach_bathroom_count\" in feat_list[0]:\n        feature_obj = BodimFeatureRow.model_validate(feat_list[0])\n    elif feat_list and isinstance(feat_list[0], dict) and \"data\" in feat_list[0]:",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "transform_landing_demo_posts",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "def transform_landing_demo_posts(property_resp: Any) -> LandingDemoPostsResponse:\n    \"\"\"\n    Transformer for the new landing/demo endpoint.\n    Expects a response like:\n    \"\"\"\n    raw_list, count = _unwrap_resp(property_resp)  \n    if not raw_list:\n        return LandingDemoPostsResponse(data=[], count=count)\n    posts: List[LandingDemoPostDTO] = []\n    for row in raw_list:",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "transform_landing_demo_post_details",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "def transform_landing_demo_post_details(single_post_resp: Any) -> LandingDemoPostsResponse:\n    \"\"\"\n    Accepts:\n      - SinglePostResponse (your existing response model)\n      - or dict shaped like {\"data\":[...], \"count\":...}\n    \"\"\"\n    raw_list, count = _unwrap_resp(single_post_resp)  \n    if not raw_list:\n        return LandingDemoPostsResponse(data=[], count=count)\n    first = raw_list[0]",
         "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
         "documentation": {}
     },
@@ -2064,6 +2192,15 @@
         "documentation": {}
     },
     {
+        "label": "GetLandingPagePostDetailsService",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.services.LandingPagePostDetailsService",
+        "description": "services.GeneralUserService.app.services.LandingPagePostDetailsService",
+        "peekOfCode": "def GetLandingPagePostDetailsService(db,post_id):\n    \"\"\"    \n    :param db: database instance\n    :param post_id: property id\n    return limited setup of property.\n    also in the nearby_services object key values are randomly selected\n    \"\"\"\n    property = GetSinglePostService(db=db,post_id=post_id)\n    dto = transform_landing_demo_post_details(single_post_resp=property)\n    return dto.model_dump()",
+        "detail": "services.GeneralUserService.app.services.LandingPagePostDetailsService",
+        "documentation": {}
+    },
+    {
         "label": "health_check",
         "kind": 2,
         "importPath": "services.GeneralUserService.app.main",
@@ -2077,7 +2214,7 @@
         "kind": 5,
         "importPath": "services.GeneralUserService.app.main",
         "description": "services.GeneralUserService.app.main",
-        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\napp.include_router(FetchLandingDemoPostsRouter)\napp.include_router(SinglePropertyDetailsRouter)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError",
+        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\napp.include_router(FetchLandingDemoPostsRouter)\napp.include_router(SinglePropertyDetailsRouter)\napp.include_router(LandingPagePostDetails)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,",
         "detail": "services.GeneralUserService.app.main",
         "documentation": {}
     },
