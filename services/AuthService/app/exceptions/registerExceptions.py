@@ -143,3 +143,11 @@ class vefiricationCodeNotFoundException(RegisterException):
             error_message=message,
             status_code=404,
         )
+
+class userNotAllowedToModified(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="USER_NOT_ALLOWED_TO_MODIFIED",
+            error_message=message,
+            status_code=403,
+        )

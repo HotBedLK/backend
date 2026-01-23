@@ -192,3 +192,19 @@ class Transactions:
                 return True
         except APIError as exc:
             raise SupabaseApiFailException(message=str(exc)) from exc
+
+    @staticmethod
+    def update_user_details(user_id: str, update_data: dict, db: Client):
+        try:
+            response = (
+                db.table("Users")
+                .update(update_data)
+                .eq("id", user_id)
+                .execute()
+            )
+            if len(response.data) == 0:
+                return False
+            else:
+                return True
+        except APIError as exc:
+            raise SupabaseApiFailException(message=str(exc)) from exc
