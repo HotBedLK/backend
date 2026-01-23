@@ -1,4 +1,4 @@
-from fastapi import HTTPException
+from fastapi import HTTPException,status
 
 class GeneralUserExceptions(Exception):
     def __init__(
@@ -19,6 +19,48 @@ class SupabaseApiFailException(GeneralUserExceptions):
             error_message=message,
             status_code=500,
         )
+
+
+class NotAcceptablePostIDException(GeneralUserExceptions):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="NOT_ACCEPTABLE_POST_ID",
+            error_message=message,
+            status_code=status.HTTP_400_BAD_REQUEST,
+        )
+
+class NotExsistPropertyException(GeneralUserExceptions):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="PROPERTY_NOT_EXIST",
+            error_message=message,
+            status_code=status.HTTP_400_BAD_REQUEST,
+        )
+
+
+class GeneralUserServiceLayerException(GeneralUserExceptions):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="INTERNAL_SERVER_ERROR",
+            error_message=message,
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        )
+
+
+
+
+
+
+
+class GeneralUserCacheStorageException(GeneralUserExceptions):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="INTERNAL_SERVER_ERROR",
+            error_message=message,
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        )
+
+
 
 
 

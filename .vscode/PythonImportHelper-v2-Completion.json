@@ -353,6 +353,14 @@
         "documentation": {}
     },
     {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -482,6 +490,46 @@
     },
     {
         "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -753,67 +801,27 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
-        "label": "timezone",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timezone",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timezone",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -849,7 +857,79 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -966,6 +1046,78 @@
         "documentation": {}
     },
     {
+        "label": "SinglePostResponse",
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "SinglePostResponse",
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "transform_separate_responses",
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserCacheStorageException",
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserCacheStorageException",
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserServiceLayerException",
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "NotAcceptablePostIDException",
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "NotExsistPropertyException",
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserExceptions",
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
         "label": "FetchLandingDemoPostsService",
         "importPath": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
         "description": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
@@ -990,12 +1142,19 @@
         "documentation": {}
     },
     {
-        "label": "random",
-        "kind": 6,
+        "label": "GetSinglePostService",
+        "importPath": "services.GeneralUserService.app.services.GetSinglePostService",
+        "description": "services.GeneralUserService.app.services.GetSinglePostService",
         "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
+        "detail": "services.GeneralUserService.app.services.GetSinglePostService",
+        "documentation": {}
+    },
+    {
+        "label": "Transactions",
+        "importPath": "services.GeneralUserService.app.db.transaction",
+        "description": "services.GeneralUserService.app.db.transaction",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.db.transaction",
         "documentation": {}
     },
     {
@@ -1015,11 +1174,28 @@
         "documentation": {}
     },
     {
-        "label": "GeneralUserExceptions",
-        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
-        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "label": "GeneralUserCacheStorage",
+        "importPath": "services.CashingService.GeneralUserServiceCache",
+        "description": "services.CashingService.GeneralUserServiceCache",
         "isExtraImport": true,
-        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "detail": "services.CashingService.GeneralUserServiceCache",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "importPath": "services.GeneralUserService.app.utils",
+        "description": "services.GeneralUserService.app.utils",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -1578,7 +1754,7 @@
         "kind": 6,
         "importPath": "services.CashingService.GeneralUserServiceCache",
         "description": "services.CashingService.GeneralUserServiceCache",
-        "peekOfCode": "class GeneralUserCacheStorage:\n    LANDING_PAGE_DEMO_KEY:Final[str] = \"landing:properties\"\n    LANDING_PAGE_DEMO_TTL :Final[int] =  600\n    @staticmethod\n    def SetLandingPageDemos(payload:LandingPageRedisPayload)->bool:\n        \"\"\"store lading page demo post array in to the redis database-1 redis database-1 beongs only to general user service only!!!\"\"\"\n        try:\n            row_payload = payload.model_dump(exclude_none=True,mode=\"json\")\n            r:Redis = GetGeneralUserRedisClient()\n            r.setex(GeneralUserCacheStorage.LANDING_PAGE_DEMO_KEY,GeneralUserCacheStorage.LANDING_PAGE_DEMO_TTL,json.dumps(row_payload))",
+        "peekOfCode": "class GeneralUserCacheStorage:\n    LANDING_PAGE_DEMO_KEY:Final[str] = \"landing:properties\"\n    LANDING_PAGE_DEMO_TTL :Final[int] =  600\n    POST_STORE_TTL = 60\n    @staticmethod\n    def SetLandingPageDemos(payload:LandingPageRedisPayload)->bool:\n        \"\"\"store lading page demo post array in to the redis database-1 redis database-1 beongs only to general user service only!!!\"\"\"\n        try:\n            row_payload = payload.model_dump(exclude_none=True,mode=\"json\")\n            r:Redis = GetGeneralUserRedisClient()",
         "detail": "services.CashingService.GeneralUserServiceCache",
         "documentation": {}
     },
@@ -1587,7 +1763,7 @@
         "kind": 2,
         "importPath": "services.CashingService.GeneralUserServiceCache",
         "description": "services.CashingService.GeneralUserServiceCache",
-        "peekOfCode": "def GetGeneralUserRedisClient()->Redis:\n    return Redis(\n        host=config(\"REDIS_HOST\", default=\"redis_database\"),\n        port=config(\"REDIS_PORT\", default=6379, cast=int),\n        password=config(\"REDIS_PASSWORD\", default=None),\n        db=1,\n        decode_responses=True,\n    )\nclass GeneralUserCacheStorage:\n    LANDING_PAGE_DEMO_KEY:Final[str] = \"landing:properties\"",
+        "peekOfCode": "def GetGeneralUserRedisClient()->Redis:\n    \"\"\"each service have different redis instances. so for each service have separate databases\n            for this service we used database 1\n        \"\"\"\n    return Redis(\n        host=config(\"REDIS_HOST\", default=\"redis_database\"),\n        port=config(\"REDIS_PORT\", default=6379, cast=int),\n        password=config(\"REDIS_PASSWORD\", default=None),\n        db=1, \n        decode_responses=True,",
         "detail": "services.CashingService.GeneralUserServiceCache",
         "documentation": {}
     },
@@ -1605,7 +1781,7 @@
         "kind": 2,
         "importPath": "services.GeneralUserService.app.api.SinglePropertyDetails",
         "description": "services.GeneralUserService.app.api.SinglePropertyDetails",
-        "peekOfCode": "def GetSinglePostController(db: Annotated[Client, Depends(get_supabase_client)],post_id:str):\n    pass",
+        "peekOfCode": "def GetSinglePostController(db: Annotated[Client, Depends(get_supabase_client)],post_id:str):\n    post =  GetSinglePostService(db=db,post_id=post_id)\n    return SinglePostResponse(data=post.data)",
         "detail": "services.GeneralUserService.app.api.SinglePropertyDetails",
         "documentation": {}
     },
@@ -1614,7 +1790,7 @@
         "kind": 6,
         "importPath": "services.GeneralUserService.app.db.transaction",
         "description": "services.GeneralUserService.app.db.transaction",
-        "peekOfCode": "class Transactions:\n    \"\"\"\n    Repository layer for interacting with the database\n    \"\"\"\n    @staticmethod\n    def FetchLandingDemoPostsRepoFunc(db: Client,limit: Optional[int] = 12) -> List[Dict[str, Any]]:\n        \"\"\"\n        get demo 12 posts from database\n        \"\"\"\n        try:",
+        "peekOfCode": "class Transactions:\n    \"\"\"\n    Repository layer for interacting with the database\n    \"\"\"\n    #THis namespace created for prevent confucing property type and actual tables names of the properties features\n    PROPERTY_FEATURE_NAMES : Final[dict] = {\n        \"Bodim\":\"Bording_property_features\",\n        \"Anex\":\"Anex_property_features\",\n        \"Apartment\":\"Apartment_property_features\"\n    }",
         "detail": "services.GeneralUserService.app.db.transaction",
         "documentation": {}
     },
@@ -1632,8 +1808,188 @@
         "kind": 6,
         "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
         "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
-        "peekOfCode": "class SupabaseApiFailException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=500,\n        )",
+        "peekOfCode": "class SupabaseApiFailException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=500,\n        )\nclass NotAcceptablePostIDException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(",
         "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "NotAcceptablePostIDException",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "peekOfCode": "class NotAcceptablePostIDException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"NOT_ACCEPTABLE_POST_ID\",\n            error_message=message,\n            status_code=status.HTTP_400_BAD_REQUEST,\n        )\nclass NotExsistPropertyException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "NotExsistPropertyException",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "peekOfCode": "class NotExsistPropertyException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"PROPERTY_NOT_EXIST\",\n            error_message=message,\n            status_code=status.HTTP_400_BAD_REQUEST,\n        )\nclass GeneralUserServiceLayerException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserServiceLayerException",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "peekOfCode": "class GeneralUserServiceLayerException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )\nclass GeneralUserCacheStorageException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(",
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserCacheStorageException",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "description": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "peekOfCode": "class GeneralUserCacheStorageException(GeneralUserExceptions):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"INTERNAL_SERVER_ERROR\",\n            error_message=message,\n            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,\n        )",
+        "detail": "services.GeneralUserService.app.exceptions.generalUserEXceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ImageRow",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class ImageRow(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    id: str\n    image: str\nclass UserRow(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    first_name: str\n    last_name: str\nclass PropertyRow(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "UserRow",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class UserRow(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    first_name: str\n    last_name: str\nclass PropertyRow(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    id: str\n    location_name: str\n    price: int\n    user_id: Optional[str] = None",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "PropertyRow",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class PropertyRow(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    id: str\n    location_name: str\n    price: int\n    user_id: Optional[str] = None\n    actual_log: Optional[str] = None\n    actual_lat: Optional[str] = None\n    selected_lat: Optional[str] = None\n    selected_log: Optional[str] = None",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "BodimFeatureRow",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class BodimFeatureRow(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    attach_bathroom_count: int\n    seperate_bathroom_count: int\n    parking: bool\n    bed_count: int\n    table: int\n    mirror_table: int\n    storagebox: int\n    fan: int",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "FeaturesEnvelope",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class FeaturesEnvelope(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    data: List[BodimFeatureRow] = Field(default_factory=list)\n    count: Optional[int] = None\nclass PropertyDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    id: str\n    location_name: str\n    price: int\n    description: str",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "PropertyDTO",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class PropertyDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    id: str\n    location_name: str\n    price: int\n    description: str\n    created_at: datetime\n    property_type: str\n    availability: bool\n    available_date: datetime",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "GymItem",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class GymItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    name: str = \"\"\n    distance: float = 0.0\n    location: str = \"\"\nclass HospitalItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    name: str = \"\"\n    distance: float = 0.0\n    location: str = \"\"",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "HospitalItem",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class HospitalItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    name: str = \"\"\n    distance: float = 0.0\n    location: str = \"\"\nclass SchoolItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    name: str = \"\"\n    distance: float = 0.0\n    location: str = \"\"",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "SchoolItem",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class SchoolItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    name: str = \"\"\n    distance: float = 0.0\n    location: str = \"\"\nclass SupermarketItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    name: str = \"\"\n    distance: float = 0.0\n    location: str = \"\"",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "SupermarketItem",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class SupermarketItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    name: str = \"\"\n    distance: float = 0.0\n    location: str = \"\"\nclass BillsItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    water_bill: bool = False\n    electricity_bill: bool = False\n    parking_bill: bool = False",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "BillsItem",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class BillsItem(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    water_bill: bool = False\n    electricity_bill: bool = False\n    parking_bill: bool = False\n    internet_bill: bool = False\n    tv_bill: bool = False\n    service_bill: bool = False\nclass NearbyServicesDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "NearbyServicesDTO",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class NearbyServicesDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    Gym: List[GymItem] = Field(default_factory=list)\n    Hospital: List[HospitalItem] = Field(default_factory=list)\n    Schools: List[SchoolItem] = Field(default_factory=list)\n    Supermarket: List[SupermarketItem] = Field(default_factory=list)\n    Bills: List[BillsItem] = Field(default_factory=list)\nclass SinglePostDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    property: PropertyDTO",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "SinglePostDTO",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class SinglePostDTO(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    property: PropertyDTO\n    property_features: Optional[BodimFeatureRow] = None\n    nearby_services: NearbyServicesDTO\n    owner_of_the_property: Optional[UserRow] = None\n    property_images: List[ImageRow] = Field(default_factory=list)\nclass SinglePostResponse(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    data: List[SinglePostDTO]",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "SinglePostResponse",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "class SinglePostResponse(BaseModel):\n    model_config = ConfigDict(extra=\"ignore\")\n    data: List[SinglePostDTO]\n    count: Optional[int] = None\ndef _unwrap_resp(resp: Any) -> Tuple[List[Any], Optional[int]]:\n    if hasattr(resp, \"data\"):\n        return (resp.data or []), getattr(resp, \"count\", None)\n    if isinstance(resp, dict):\n        return resp.get(\"data\", []) or [], resp.get(\"count\")\n    return [], None",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "transform_combined_payload",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "def transform_combined_payload(resp: Any) -> SinglePostResponse:\n    raw_list, count = _unwrap_resp(resp)\n    if not raw_list:\n        return SinglePostResponse(data=[], count=count)\n    property_obj = PropertyRow.model_validate(raw_list[0])\n    feature_obj: Optional[BodimFeatureRow] = None\n    if len(raw_list) >= 2 and isinstance(raw_list[1], dict) and \"data\" in raw_list[1]:\n        env = FeaturesEnvelope.model_validate(raw_list[1])\n        feature_obj = env.data[0] if env.data else None\n    post = _build_single_post(property_obj, feature_obj)",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "documentation": {}
+    },
+    {
+        "label": "transform_separate_responses",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "description": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
+        "peekOfCode": "def transform_separate_responses(property_resp: Any, features_resp: Any) -> SinglePostResponse:\n    prop_list, prop_count = _unwrap_resp(property_resp)\n    if not prop_list:\n        return SinglePostResponse(data=[], count=prop_count)\n    property_obj = PropertyRow.model_validate(prop_list[0])\n    feat_list, _ = _unwrap_resp(features_resp)\n    feature_obj: Optional[BodimFeatureRow] = None\n    if feat_list and isinstance(feat_list[0], dict) and \"attach_bathroom_count\" in feat_list[0]:\n        feature_obj = BodimFeatureRow.model_validate(feat_list[0])\n    elif feat_list and isinstance(feat_list[0], dict) and \"data\" in feat_list[0]:",
+        "detail": "services.GeneralUserService.app.schemas.GetSinglePostSchema",
         "documentation": {}
     },
     {
@@ -1682,6 +2038,15 @@
         "documentation": {}
     },
     {
+        "label": "GetSinglePostService",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.services.GetSinglePostService",
+        "description": "services.GeneralUserService.app.services.GetSinglePostService",
+        "peekOfCode": "def GetSinglePostService(db,post_id):\n    try:\n        #check the post id is a valid id\n        if not utils.IsValidModelId(expected_uuid=post_id):\n            raise NotAcceptablePostIDException(message=\"this post id is invalid. can't process!\")\n        #check in the redis memory that post is available\n        cached = GeneralUserCacheStorage.GetProperty(property_id=post_id)\n        if cached is not None:\n            return cached\n        #if not fetch it from databse",
+        "detail": "services.GeneralUserService.app.services.GetSinglePostService",
+        "documentation": {}
+    },
+    {
         "label": "health_check",
         "kind": 2,
         "importPath": "services.GeneralUserService.app.main",
@@ -1697,6 +2062,24 @@
         "description": "services.GeneralUserService.app.main",
         "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\napp.include_router(FetchLandingDemoPostsRouter)\napp.include_router(SinglePropertyDetailsRouter)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError",
         "detail": "services.GeneralUserService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUSerServiceUtils",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.utils",
+        "description": "services.GeneralUserService.app.utils",
+        "peekOfCode": "class GeneralUSerServiceUtils:\n    \"\"\"\n    in this class we maintain all the general user service util functions.\n    this class intantiated below of the page. so we can import that instance and use the functions of this class \n    \"\"\"\n    def IsValidModelId(self,expected_uuid:str)->bool:\n        \"\"\"\n        Docstring for StringToUUID\n        :param expected_uuid: expected string to convert to the uuid format\n        :type expected_uuid: str",
+        "detail": "services.GeneralUserService.app.utils",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "kind": 5,
+        "importPath": "services.GeneralUserService.app.utils",
+        "description": "services.GeneralUserService.app.utils",
+        "peekOfCode": "utils = GeneralUSerServiceUtils()",
+        "detail": "services.GeneralUserService.app.utils",
         "documentation": {}
     },
     {
