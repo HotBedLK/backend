@@ -1,3 +1,8 @@
 .env
 .env.local
+<<<<<<< HEAD
 __pycache__
+=======
+__pycache__/
+*.pyc
+>>>>>>> ae714bc (Ignore Python cache files)
