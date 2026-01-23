@@ -169,6 +169,14 @@
         "documentation": {}
     },
     {
+        "label": "Client",
+        "importPath": "supabase",
+        "description": "supabase",
+        "isExtraImport": true,
+        "detail": "supabase",
+        "documentation": {}
+    },
+    {
         "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -290,6 +298,22 @@
     },
     {
         "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -425,6 +449,14 @@
         "documentation": {}
     },
     {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -470,6 +502,14 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_supabase_client",
+        "importPath": "app.database.supabase",
+        "description": "app.database.supabase",
+        "isExtraImport": true,
+        "detail": "app.database.supabase",
         "documentation": {}
     },
     {
@@ -934,6 +974,22 @@
         "documentation": {}
     },
     {
+        "label": "app",
+        "importPath": "services.AdminService.app.main",
+        "description": "services.AdminService.app.main",
+        "isExtraImport": true,
+        "detail": "services.AdminService.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "services.AdminService.app.main",
+        "description": "services.AdminService.app.main",
+        "isExtraImport": true,
+        "detail": "services.AdminService.app.main",
+        "documentation": {}
+    },
+    {
         "label": "random",
         "kind": 6,
         "isExtraImport": true,
@@ -988,14 +1044,6 @@
         "description": "services.AuthService.app.main",
         "isExtraImport": true,
         "detail": "services.AuthService.app.main",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "importPath": "services.AdminService.app.main",
-        "description": "services.AdminService.app.main",
-        "isExtraImport": true,
-        "detail": "services.AdminService.app.main",
         "documentation": {}
     },
     {
@@ -1553,6 +1601,15 @@
         "documentation": {}
     },
     {
+        "label": "GetSinglePostController",
+        "kind": 2,
+        "importPath": "services.GeneralUserService.app.api.SinglePropertyDetails",
+        "description": "services.GeneralUserService.app.api.SinglePropertyDetails",
+        "peekOfCode": "def GetSinglePostController(db: Annotated[Client, Depends(get_supabase_client)],post_id:str):\n    pass",
+        "detail": "services.GeneralUserService.app.api.SinglePropertyDetails",
+        "documentation": {}
+    },
+    {
         "label": "Transactions",
         "kind": 6,
         "importPath": "services.GeneralUserService.app.db.transaction",
@@ -1638,7 +1695,7 @@
         "kind": 5,
         "importPath": "services.GeneralUserService.app.main",
         "description": "services.GeneralUserService.app.main",
-        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\napp.include_router(FetchLandingDemoPostsRouter)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError\n):",
+        "peekOfCode": "app = FastAPI(title=\"Generaluser Service\")\napp.include_router(FetchLandingDemoPostsRouter)\napp.include_router(SinglePropertyDetailsRouter)\n@app.get(\"/health\")\ndef health_check():\n    return {\"status\": \"ok\", \"service\": \"user\"}\n@app.exception_handler(RequestValidationError)\nasync def validation_exception_handler(\n    request: Request,\n    exc: RequestValidationError",
         "detail": "services.GeneralUserService.app.main",
         "documentation": {}
     },
