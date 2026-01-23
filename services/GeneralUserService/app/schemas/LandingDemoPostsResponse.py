@@ -20,3 +20,7 @@ class LandingDemoPostsResponse(BaseModel):
     message:Optional[str] = Field(None)
     total_available_properties:Optional[int]
     properties:Optional[List[PropertyModel]]
+
+class LandingPageRedisPayload(BaseModel):
+    total_available_properties:Optional[int]
+    properties:Optional[List[PropertyModel]]

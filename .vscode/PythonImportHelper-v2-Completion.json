@@ -48,12 +48,28 @@
         "documentation": {}
     },
     {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
         "documentation": {}
     },
     {
@@ -361,6 +377,22 @@
         "documentation": {}
     },
     {
+        "label": "Redis",
+        "importPath": "redis",
+        "description": "redis",
+        "isExtraImport": true,
+        "detail": "redis",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Annotated",
         "importPath": "typing",
         "description": "typing",
@@ -377,7 +409,7 @@
         "documentation": {}
     },
     {
-        "label": "Annotated",
+        "label": "Final",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -490,6 +522,14 @@
     },
     {
         "label": "RateLimiter",
+        "importPath": "app.utils.rate_limiter",
+        "description": "app.utils.rate_limiter",
+        "isExtraImport": true,
+        "detail": "app.utils.rate_limiter",
+        "documentation": {}
+    },
+    {
+        "label": "get_redis_client",
         "importPath": "app.utils.rate_limiter",
         "description": "app.utils.rate_limiter",
         "isExtraImport": true,
@@ -761,6 +801,22 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "JSONResponse",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
@@ -828,11 +884,20 @@
         "documentation": {}
     },
     {
-        "label": "FetchLandingDemoPostsService",
-        "importPath": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
-        "description": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "label": "pytest",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "LandingPageRedisPayload",
+        "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
         "documentation": {}
     },
     {
@@ -841,6 +906,31 @@
         "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
         "isExtraImport": true,
         "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "documentation": {}
+    },
+    {
+        "label": "LandingPageRedisPayload",
+        "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "FetchLandingDemoPostsService",
+        "importPath": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "description": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
+        "isExtraImport": true,
+        "detail": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
         "documentation": {}
     },
     {
@@ -858,6 +948,14 @@
         "description": "services.GeneralUserService.app.db.transaction",
         "isExtraImport": true,
         "detail": "services.GeneralUserService.app.db.transaction",
+        "documentation": {}
+    },
+    {
+        "label": "GeneralUserCacheStorage",
+        "importPath": "services.CashingService.GeneralUserServiceCache",
+        "description": "services.CashingService.GeneralUserServiceCache",
+        "isExtraImport": true,
+        "detail": "services.CashingService.GeneralUserServiceCache",
         "documentation": {}
     },
     {
@@ -1054,7 +1152,7 @@
         "kind": 6,
         "importPath": "services.AuthService.app.exceptions.registerExceptions",
         "description": "services.AuthService.app.exceptions.registerExceptions",
-        "peekOfCode": "class RegisterException(Exception):\n    def __init__(\n        self,\n        error_code: str,\n        error_message: str,\n        status_code: int = 400,\n    ):\n        self.error_code = error_code\n        self.error_message = error_message\n        self.status_code = status_code",
+        "peekOfCode": "class RegisterException(Exception):\n    def __init__(\n        self,\n        error_code: str,\n        error_message: str,\n        status_code: int = 400,\n    ):\n        super().__init__(error_message)\n        self.error_code = error_code\n        self.error_message = error_message",
         "detail": "services.AuthService.app.exceptions.registerExceptions",
         "documentation": {}
     },
@@ -1153,7 +1251,7 @@
         "kind": 6,
         "importPath": "services.AuthService.app.exceptions.registerExceptions",
         "description": "services.AuthService.app.exceptions.registerExceptions",
-        "peekOfCode": "class UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"DUPLICATE_USER_CREATION\",\n            error_message=message,\n            status_code=401,\n        )\nclass UserNumberAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
+        "peekOfCode": "class UserEmailAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"DUPLICATE_USER_CREATION\",\n            error_message=message,\n            status_code=409,  \n        )\nclass UserNumberAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(",
         "detail": "services.AuthService.app.exceptions.registerExceptions",
         "documentation": {}
     },
@@ -1162,7 +1260,7 @@
         "kind": 6,
         "importPath": "services.AuthService.app.exceptions.registerExceptions",
         "description": "services.AuthService.app.exceptions.registerExceptions",
-        "peekOfCode": "class UserNumberAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"DUPLICATE_USER_CREATION\",\n            error_message=message,\n            status_code=401,\n        )",
+        "peekOfCode": "class UserNumberAlreadyExistsException(RegisterException):\n    def __init__(self, message: str):\n        super().__init__(\n            error_code=\"DUPLICATE_USER_CREATION\",\n            error_message=message,\n            status_code=409,  \n        )",
         "detail": "services.AuthService.app.exceptions.registerExceptions",
         "documentation": {}
     },
@@ -1338,6 +1436,60 @@
         "documentation": {}
     },
     {
+        "label": "register_data",
+        "kind": 2,
+        "importPath": "services.AuthService.tests.registerServiceTest",
+        "description": "services.AuthService.tests.registerServiceTest",
+        "peekOfCode": "def register_data():\n    return {\n        \"email\": \"test@example.com\",\n        \"mobile_number\": \"0787389913\",\n        \"first_name\": \"Gayashan\",\n        \"last_name\": \"Gamage\",\n        \"password\": \"1234abcd.\",\n    }\n@pytest.fixture\ndef db():",
+        "detail": "services.AuthService.tests.registerServiceTest",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 2,
+        "importPath": "services.AuthService.tests.registerServiceTest",
+        "description": "services.AuthService.tests.registerServiceTest",
+        "peekOfCode": "def db():\n    # could be a real session fixture in your app; for unit tests a dummy is fine\n    return object()\ndef test_register_raises_when_email_exists(monkeypatch, register_data, db):\n    class FakeTransactions:\n        @staticmethod\n        def check_user_by_email(email, db):\n            return {\"id\": 1}  # user exists\n        @staticmethod\n        def check_user_by_phonenumber(number, db):",
+        "detail": "services.AuthService.tests.registerServiceTest",
+        "documentation": {}
+    },
+    {
+        "label": "test_register_raises_when_email_exists",
+        "kind": 2,
+        "importPath": "services.AuthService.tests.registerServiceTest",
+        "description": "services.AuthService.tests.registerServiceTest",
+        "peekOfCode": "def test_register_raises_when_email_exists(monkeypatch, register_data, db):\n    class FakeTransactions:\n        @staticmethod\n        def check_user_by_email(email, db):\n            return {\"id\": 1}  # user exists\n        @staticmethod\n        def check_user_by_phonenumber(number, db):\n            return None\n    monkeypatch.setattr(svc, \"Transactions\", FakeTransactions)\n    with pytest.raises(svc.UserEmailAlreadyExistsException) as exc:",
+        "detail": "services.AuthService.tests.registerServiceTest",
+        "documentation": {}
+    },
+    {
+        "label": "test_register_raises_when_phone_exists",
+        "kind": 2,
+        "importPath": "services.AuthService.tests.registerServiceTest",
+        "description": "services.AuthService.tests.registerServiceTest",
+        "peekOfCode": "def test_register_raises_when_phone_exists(monkeypatch, register_data, db):\n    class FakeTransactions:\n        @staticmethod\n        def check_user_by_email(email, db):\n            return None\n        @staticmethod\n        def check_user_by_phonenumber(number, db):\n            return {\"id\": 2}  # phone exists\n    monkeypatch.setattr(svc, \"Transactions\", FakeTransactions)\n    with pytest.raises(svc.UserNumberAlreadyExistsException) as exc:",
+        "detail": "services.AuthService.tests.registerServiceTest",
+        "documentation": {}
+    },
+    {
+        "label": "test_register_success_creates_user_creates_otp_attempt_and_sends_sms",
+        "kind": 2,
+        "importPath": "services.AuthService.tests.registerServiceTest",
+        "description": "services.AuthService.tests.registerServiceTest",
+        "peekOfCode": "def test_register_success_creates_user_creates_otp_attempt_and_sends_sms(\n    monkeypatch, register_data, db\n):\n    calls = {\n        \"create_user_payload\": None,\n        \"create_user\": None,\n        \"create_otp_attempt\": None,\n        \"send_otp_sms\": None,\n        \"hash_input\": None,\n    }",
+        "detail": "services.AuthService.tests.registerServiceTest",
+        "documentation": {}
+    },
+    {
+        "label": "test_register_success_user_not_created_still_sends_sms_but_no_otp_attempt",
+        "kind": 2,
+        "importPath": "services.AuthService.tests.registerServiceTest",
+        "description": "services.AuthService.tests.registerServiceTest",
+        "peekOfCode": "def test_register_success_user_not_created_still_sends_sms_but_no_otp_attempt(\n    monkeypatch, register_data, db\n):\n    calls = {\"create_otp_attempt_called\": False, \"send_otp_sms\": None}\n    def fake_send_otp_sms(recipient, otp_code):\n        calls[\"send_otp_sms\"] = {\"recipient\": recipient, \"otp_code\": otp_code}\n    class FakeTransactions:\n        @staticmethod\n        def check_user_by_email(email, db):\n            return None",
+        "detail": "services.AuthService.tests.registerServiceTest",
+        "documentation": {}
+    },
+    {
         "label": "health_check",
         "kind": 2,
         "importPath": "services.AutomationService.app.main",
@@ -1374,11 +1526,29 @@
         "documentation": {}
     },
     {
+        "label": "GeneralUserCacheStorage",
+        "kind": 6,
+        "importPath": "services.CashingService.GeneralUserServiceCache",
+        "description": "services.CashingService.GeneralUserServiceCache",
+        "peekOfCode": "class GeneralUserCacheStorage:\n    LANDING_PAGE_DEMO_KEY:Final[str] = \"landing:properties\"\n    LANDING_PAGE_DEMO_TTL :Final[int] =  600\n    @staticmethod\n    def SetLandingPageDemos(payload:LandingPageRedisPayload)->bool:\n        \"\"\"store lading page demo post array in to the redis database-1 redis database-1 beongs only to general user service only!!!\"\"\"\n        try:\n            row_payload = payload.model_dump(exclude_none=True,mode=\"json\")\n            r:Redis = GetGeneralUserRedisClient()\n            r.setex(GeneralUserCacheStorage.LANDING_PAGE_DEMO_KEY,GeneralUserCacheStorage.LANDING_PAGE_DEMO_TTL,json.dumps(row_payload))",
+        "detail": "services.CashingService.GeneralUserServiceCache",
+        "documentation": {}
+    },
+    {
+        "label": "GetGeneralUserRedisClient",
+        "kind": 2,
+        "importPath": "services.CashingService.GeneralUserServiceCache",
+        "description": "services.CashingService.GeneralUserServiceCache",
+        "peekOfCode": "def GetGeneralUserRedisClient()->Redis:\n    return Redis(\n        host=config(\"REDIS_HOST\", default=\"redis_database\"),\n        port=config(\"REDIS_PORT\", default=6379, cast=int),\n        password=config(\"REDIS_PASSWORD\", default=None),\n        db=1,\n        decode_responses=True,\n    )\nclass GeneralUserCacheStorage:\n    LANDING_PAGE_DEMO_KEY:Final[str] = \"landing:properties\"",
+        "detail": "services.CashingService.GeneralUserServiceCache",
+        "documentation": {}
+    },
+    {
         "label": "register",
         "kind": 2,
         "importPath": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
         "description": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
-        "peekOfCode": "def register(db: Annotated[Client, Depends(get_supabase_client)]):\n    demo_properties = FetchLandingDemoPostsService(db=db)\n    return LandingDemoPostsResponse(\n        succuss=True,\n        message=\"Landng page post retrived succuss!\",\n        total_available_properties=len(demo_properties.data),\n        properties=demo_properties.data\n    )",
+        "peekOfCode": "def register(db: Annotated[Client, Depends(get_supabase_client)]):\n    demo_properties = FetchLandingDemoPostsService(db=db)\n    return LandingDemoPostsResponse(\n        succuss=True,\n        message=\"Landng page post retrived succuss!\",\n        total_available_properties=demo_properties.total_available_properties,\n        properties=demo_properties.properties\n    )",
         "detail": "services.GeneralUserService.app.api.FetchLandingDemoPosts",
         "documentation": {}
     },
@@ -1432,7 +1602,16 @@
         "kind": 6,
         "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
         "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
-        "peekOfCode": "class LandingDemoPostsResponse(BaseModel):\n    succuss:bool = Field(True)\n    status:int = Field(status.HTTP_200_OK)\n    message:Optional[str] = Field(None)\n    total_available_properties:Optional[int]\n    properties:Optional[List[PropertyModel]]",
+        "peekOfCode": "class LandingDemoPostsResponse(BaseModel):\n    succuss:bool = Field(True)\n    status:int = Field(status.HTTP_200_OK)\n    message:Optional[str] = Field(None)\n    total_available_properties:Optional[int]\n    properties:Optional[List[PropertyModel]]\nclass LandingPageRedisPayload(BaseModel):\n    total_available_properties:Optional[int]\n    properties:Optional[List[PropertyModel]]",
+        "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "documentation": {}
+    },
+    {
+        "label": "LandingPageRedisPayload",
+        "kind": 6,
+        "importPath": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "description": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
+        "peekOfCode": "class LandingPageRedisPayload(BaseModel):\n    total_available_properties:Optional[int]\n    properties:Optional[List[PropertyModel]]",
         "detail": "services.GeneralUserService.app.schemas.LandingDemoPostsResponse",
         "documentation": {}
     },
@@ -1441,7 +1620,7 @@
         "kind": 2,
         "importPath": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
         "description": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
-        "peekOfCode": "def FetchLandingDemoPostsService(db):\n    #call repo layer and get 12 posts\n    return Transactions.FetchLandingDemoPostsRepoFunc(db=db,limit=12)",
+        "peekOfCode": "def FetchLandingDemoPostsService(db):\n    #check in the cache allready available\n    cached = GeneralUserCacheStorage.GetLandingPageDemos()\n    if cached is None:\n        #call repo layer and get 12 posts\n        payload =  Transactions.FetchLandingDemoPostsRepoFunc(db=db,limit=12)\n        #store in the redis cache memory\n        GeneralUserCacheStorage.SetLandingPageDemos(payload=LandingPageRedisPayload(total_available_properties=len(payload.data),properties=payload.data))\n        cached = GeneralUserCacheStorage.GetLandingPageDemos()\n        return cached",
         "detail": "services.GeneralUserService.app.services.FetchLandingDemoPostsService",
         "documentation": {}
     },
