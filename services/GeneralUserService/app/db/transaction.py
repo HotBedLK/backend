@@ -23,9 +23,6 @@ class Transactions:
                 return data
             data = db.from_("Propeties").select("id, property_type, price, location_name,Images(id, image)").range(1,12).execute()
             
-            
-            
-            
         except APIError as exc:
             raise SupabaseApiFailException(message=str(exc)) from exc
         except Exception as e:

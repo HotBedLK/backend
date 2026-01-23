@@ -1,5 +1,4 @@
 from functools import lru_cache
-
 from decouple import config
 from fastapi import HTTPException, Request, status
 from redis import Redis
