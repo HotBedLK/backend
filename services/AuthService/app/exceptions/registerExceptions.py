@@ -127,3 +127,11 @@ class credencialsNotMatchedException(RegisterException):
             error_message=message,
             status_code=401,
         )
+
+class databaseUpdateFaildException(RegisterException):
+    def __init__(self, message: str):
+        super().__init__(
+            error_code="DATABASE_UPDATE_FAILD",
+            error_message=message,
+            status_code=500,
+        )
